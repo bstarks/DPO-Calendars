@@ -1,0 +1,416 @@
+/* =====  Media/Printer Settings  ======================================== */
+
+@media print {
+	.wcal_header, #wcal_footer { display: none; }
+}
+
+
+/* =====  HTML Tag Settings  ============================================= */
+/* <X> Exclude from insert files to avoid page conflicts! */
+body {
+	text-align			: center;
+	margin      		: 0;
+	padding     		: 0;
+	font-family			: Arial;
+    font-size   		: 10px;
+	background-color	: white;
+}
+/* </X> End exclude */
+#wcal_calendar {
+	text-align			: center;
+	margin      		: 0;
+	padding     		: 0;
+	font-family			: Arial;
+	font-size   		: 10px;
+	background-color	: white;
+}
+#wcal_calendar h1 {
+	text-align			: center;
+	font-size			: 16px;
+}
+
+#wcal_printArea {
+	display				: inline-block;
+	margin      		: 0;
+	padding     		: 0;
+	width				: 100%;
+	max-width			: 6.5in;
+	min-width			: 6.5in;
+	height				: 9in;
+	font				: inherit;
+	text-align			: center;
+	z-index				: 10;
+}
+
+.wcal_title {
+	text-align			: center;
+	font-size			: 16px;
+}
+
+/* =====  Top Button Bar  ================================================= */
+.wcal_header  {
+	padding				: 5px 0 2px 0;
+	margin				: 0;
+	margin-bottom		: 10px;
+	background			: buttonface;
+	border-bottom		: 1px outset;
+	min-width			: 6.5in;
+	text-align			: center;
+}
+
+.wcal_header ul {
+	margin				: 0;
+}
+
+.wcal_header button  {
+	background-repeat	: no-repeat; 
+	height				: 30px; 
+	vertical-align		: middle; 
+	font-size			: 12px;
+	background-color	: #e9e9e9;
+	border				: 1px solid #a0a0a0;
+}
+#wcal_input {
+	width				: 33px;
+	height				: 20px;
+	padding				: 4px 4px;
+	text-align			: center;
+	vertical-align		: middle;
+	border				: 1px solid ButtonShadow;
+	border-right		: 0;
+}
+
+
+/* =====  Drop Down Menu  ================================================= */
+
+/* Checkbox Menus */
+
+.wcal_dropdown {
+	/* Size and position */
+    position			: relative;
+	display				: inline-block;
+    margin				: 0 auto;
+    padding				: 0;
+	padding-right		: 18px;
+	height				: 20px; 
+}
+.wcal_dropdown span {
+	display				: hidden;
+}
+.wcal_dropdown span#wcal_dropdown_arrow:before { /* down arrow */
+    content				: "";
+    width				: auto;
+    height				: 0;
+    position			: absolute;
+    right				: 5px;
+    top					: 50%;
+    margin-top			: -3px;
+    border-width		: 4px 4px 0 4px;
+	border-style		: solid;
+    border-color		: black transparent;
+}
+
+.wcal_dropdown span#wcal_dropdown_arrow.wcal_active:before {
+	border-width		: 0 4px 4px 4px; /* up arrow -- see script */
+}
+
+/* END Checkbox Menus */
+
+.wcal_nav_separator {
+	font-size			: 22px;
+}
+
+#wcal_nav_wrap {
+	margin				: 0;
+	margin-top			: -5px;
+	margin-left			: -35px;
+	padding				: 0;
+	z-index				: 1000000000;
+	position			: relative;
+	display				: inline-block;
+}
+
+#wcal_nav_wrap li {
+	list-style			: none;
+	position			: relative;
+	display				: inline-block;
+	margin				: 0;
+	padding				: 0;
+}
+
+#wcal_nav_wrap ul li {
+	display				: block;
+	color				: #333;
+	text-decoration		: none;
+	font-weight			: 700;
+	font-size			: 12px;
+	line-height			: 32px;
+	padding				: 0 15px;
+	font-family			: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#wcal_nav_wrap ul li {
+	position			: relative;
+	display				: inline-block;
+	margin				: 0;
+	padding				: 0;
+}
+
+#wcal_nav_wrap ul li.current-menu-item {
+	background			: #ddd;
+}
+
+/*#wcal_nav_wrap ul li:hover {
+	background			: #f6f6f6;
+}*/
+
+#wcal_nav_wrap ul ul {
+	display				: none;
+	position			: absolute;
+	top					: 100%;
+	left				: 0;
+	background			: #e9e9e9;
+	border				: 1px solid #a0a0a0;
+	padding				: 0;
+}
+
+#wcal_nav_wrap ul ul li:hover {
+	background			: #f6f6f6;
+}
+
+#wcal_nav_wrap ul ul li {
+	float				: none;
+	width				: 200px;
+	text-align			: left;
+}
+
+#wcal_nav_wrap ul ul a {
+	line-height			: 120%;
+	padding				: 10px 15px;
+}
+
+#wcal_nav_wrap ul ul ul {
+	top					: 0;
+	left				: 100%;
+}
+
+#wcal_nav_wrap ul li:hover > ul {
+	display				: block;
+}
+
+
+
+/*
+	Styling the Toolbar Buttons
+ 
+	Base64 Encoded Images 
+	Online encoder: http://webcodertools.com/imagetobase64converter
+	The following are the page's images stored internally as text to avoid 
+	the loss of resources when the file is moved around or when it is 
+	manipulated in other sites. To change the images, replace the existing 
+	image with its encoded replacement. Note: page images may also be 
+	encoded into image elements in the HTML.
+*/
+.wcal_btns {
+	background-repeat	: no-repeat;
+	background-origin	: border-box;
+	background-size		: 20px 20px;
+	padding-left		: 28px;
+	background-position	: 5px center;
+}
+.wcal_btnImgPrint		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABF1BMVEUAAAD8/PzIyMjm5uaTk5O0tLRERERJSUnQ0NDi4uLz8/OmpqbIyMicnJ1YWFi2trYeHh43NzdgYGDQ0NB+fn6yvc2amprMzMyPj4+7u7u5ubmysrKwsLCfn5/Hx8esrKylpaXCwsK6urq6urplZWVpaWm+vr7R0dEbGxvExMQzMzPv7+/Y2Ni0w9hbgLSvr6/V1dW/v7/R0dHs7OyZmZnt7e3o6Oji4uLa2trLy8t1j7Pq6urk5OTf39/MzMzc3NzX19fOzs7GxsaPj4/x8fHO1+Pd3d2nudOzvs6ot8uWqMKOpMJ7mMC6u7t8lLZfhLagoKCVlZWAgIC+vr6JnryEmrlliLlri7ikqbGQna+jo6M8PDw7OzsULCOGAAAAK3RSTlMAAkT+ptyCexULBALm/nZWOzElGAf9+fPt6+vVz8W5ramlkYd0clAwMCwe0e6L3AAAAQ5JREFUGNNNz9d2gkAQgOFZgSBgj+m9l91EAqEYmoK9a3p5/+fILhjJd/mfmT07wNxkliRI8bpjulbHtg+XFVG8YwR2Q7Vt50RGVFx5AxNV1bSmaZ4iGtgs8BhbltexLS/YpREYFkkjHiU7LCXrOiYkzlYuWZczxQMTuxyHWy2Mt4pXbPas/ZFX1Trl+742/ty4RCDnut3BYPjyOpk8MaPhEYDkjd6m0/vU+z5A1m3fpXr9fk9AkOVwyrECtSkArP+LBucRrS4gFrXoMTGPokUtFNibePbjG4ahM+b3ItwD+iVsfo0f/syfw2NER8ulbbKyWbqW2O3Kbb62Misr7HalWjkviOIaJYqFi0pVgV83RjbPz3IxSwAAAABJRU5ErkJggg==); }
+.wcal_btnImgGoToYr		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAulBMVEUAAAD+/v6Pj49ra2uqqqrJ1rcAAADBwsEAAACpx4a/zqnL17nS3cPm7N4BAQG0z5WlvYSxxZa1yJq5y6DB0K3Y4csAAADj6tr1+PGw0ImpyYamwYGjwnqhwHmYsnesxoinv4Z6mk2nv4ahuX+swY+4yqBsgFKftoDC0a1VYkIHCgLY4cu/3Zq62pe12I2625O42Y7M5K/H4KnC36XF4aPA3qC93JqtyonQ5bbE2qW/2aK815q12JKr04PS5SsbAAAALHRSTlMAAgUHAk4kBBTzVDswEAr5qoF2X0EkHBgI/fv18e3p5cehmYt0ZmRiTEIsKnd/OjcAAAC8SURBVBjTjZDXDsMgDEWbFJqdrqzuvbNn5///Vk0soSrqQy7IMnAult1pL+GP8Nago5FqCCxngbHudvZIcn++rxlYIGsz1m+HlR+HOzijDLs22UoUTjTGoR0fh4AOmuX1VxQvPEg4qVOqVmVUnSjV+Mfu+p6kfhCEb0Xj9o43SPOiDD6K9VtIGj6zIpieG32O+1lf5YUEQiQRdFkeJYI+0jVl2ekxXR1ZNk2CIHDdWqIIKNpbDBRJPjDYGL6Ndw18NxBzPwAAAABJRU5ErkJggg==); }
+.wcal_btnImgPrevious	{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA7VBMVEUAAAD39/ejo6ORrmqdtnsAAAAvLy+PrWiguX8AAABSUlKMqWO/zqnt8uhSUlKcuHeMqWXY4csAAADr8OUAAAAPDw9/f3+mw4Cdv3Ghvn+TtGmNsF6QrmmPrmh4m0eNq2aIqF6DpVR3mUmHplqSrm2MqGWVr3Gbs3igt4C6yqPV38jU3sXk6tv3+PT19/I0NDTR5ry93KDG4K3I4rHB3qTD36mdzGWkz3SZyVuNxEew1Y2Vx1Wy1pCv1Yar0oGizW2JwT6FvzTC36G62pu22JOp0nvV6MPN37nN5LPK47LI4q/F4KeixnKgx22SxlDxX27+AAAAMHRSTlMAAgTquSMP38MWC6ZHDAfvtiYcEQ8KBv399/Hv39/f2dnTycfDwY9+dFAqKhoGBASFAyO9AAAA4UlEQVQY02WQ57KCMBBGE24TROze3u+1F1CkCQL2/v6P42YTHGY8k/zImf12Z0Mu0CK5olf/TxVwyoV1hiYI2/nUVxlK0DBJ4Kr5zVbP33KyFDs0H2ez/U4X3LB4LntwrOXCHI44THZ/Q9c9gTaGHJC5DzuKI3di2VNjjICk6qsTxyg9w2SwOCl+OxGX3twAcBBMOk4cyw5831+Axkpo0XgKw+D5gfH+9pNs1HoJvPSaYOG2v0xYE3MpyoW/1CsJ9FXxIXikmqYo94iiaDWJyUG1IsulO6Qky5WqRkVeEvBWZ/C5H05k9UrfAAAAAElFTkSuQmCC); }
+.wcal_btnImgCurrent		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA6lBMVEUAAAD9/f3Z4s2tra1cXFz09vC1tbWTsmy+zamctXkAAAAAAAAAAAB7e3vAz6vr7+T09/CowoePsGSSrmuUr26rv43b5NAEBAQfHx+avGygvX2TtmaMrWCZtXWMrF6IqFuKqWCSrW6SrmuXsHM5RyS+zak9SC3F0rHT3cTf5tTK47PH4a7D36mxypTB3qaw1YuezGeWyFfB2ae+3KGu1IXF4Kqk0HWZyV2PxEqHwDrR57u916G605+725252pa115S22ZOy1pCm0Heizm6Ux1OMw0Pa6snV6MLI4q3C36K20JWsz4CdxGmDvjEG7J3rAAAAKnRSTlMAAiQECgQC60yiJB0UBUIOB/zrzqtpIAwI+/nv6OfZx7uhn5FSSkQ8KhztNqjhAAAA6UlEQVQY012QB47CMBBFcYrZbBodtld6MQ6p9N65/3WYTCCReJIlz9N8f8kpJFN9QgySShCylmWNRuOcHM0kROi22p3eYJKWcQT7IEHALpybnKZlmKJ3Y7kAGZHEZwzkQ3zGWLJpKEph3HIWtm2/KsqPgJtmfrsbOvOl6y7Z3CqACyl9DPcHtw+sWN68F9WzztTjnHurXCkpKh7ttb/x1y/GvSjk7+RvguBcJAha+KbvfnDxfgnmYsxPzr8y8XgLNN7em3jHJKGirkuS9F+TAF2k4QO0UtY0VX0GVFXTyhWdRHlKRYRSrL4CcIgb5f9CP2IAAAAASUVORK5CYII=); }
+.wcal_btnImgNext		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA81BMVEUAAAD9/f3BwcGLqmP09vCUr3AAAAAmJiZmZmby9e7u8umeunobGxsvLy+NqWavyZGgu3yatneVs26Qq2mkuoW9zKfL17oAAADk6tsAAABXV1coKCj09/GowomhvH+VuWSStWN1mEaMrl+PrmVrjzmNq2R5mkuJqF2Oq2aGo1yYsXWgt4CtwZLb5NDg59bS573H4K3K47HE4Km93KCNw0XA3aWw1Iu625uz15Ko0Xmjz3LD36Oey2WbymOYyVuUx1Sq0oCfzWiSxk6HwTqEvzPO5bfH4q3B16m42Zi00JS22I+r0oKq0oGpy3ugzW2cwGuawmOxS6IWAAAAL3RSTlMAAgLWDqkhDQQKBvsTEaL8+/PzqXJHNRoYFgkIBPv7+/Xv6+Xjz8/Lx5WJdlwiHnp4ILAAAADsSURBVBjTZZCHcsIwDIZll9ZOmoQyyu7ek0DThJAQ9p7v/zTIcXxwx2edTvpPHr9BQUpwSu35+tCQBD2TzqtaqaBn6lNLExWGZp3H5G7GDfu9BAQXpG7rCZNmEDwVQJC6akjsYOGH/ftvPAFFW+L5/WjgDLafNZy8bMZ4q3an6wyHzvqDoPgv8NyeEEej8O1XTP4hM1eKzs7SQIpeC3HbYRTd5eU7X88kaX/jPyqrymZ26b78KJsgEtrMznMaiOoI/eHrqFf/UsAclyIo5xXGTNMwTJOxCueUAOVVZpSLFzHFssGqnCb7aYK8eg+1cB81z4hvBgAAAABJRU5ErkJggg==); }
+.wcal_btnImgShow		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABpFBMVEUAAAD////e3t7q6ur09PQAAABvb2+gprESEhKTk5PKztUJCQnb29tkZGTOzs6GipS5v8cgISIkJCaanJ8/QEcYGBi1trkZGRoDAwPPz9AAAAAtLS3s7Oy5vcV/hZCQk5k/QEG/xM1hYWFTU1OiqLFmZmZYWFlFRkd/gYS5v8i1usRkZGS4ur68vsFvcn5jaHDCx8+Nk5yJjI9+f4AtLjDDxMiRlp1QUVGrrrJydYKXmJpQUFBUV2BHR0g+Pj5bXWMlJSaIjZRHSVEpKSm2t7k7Ozw+QEd1d3mKjZNERk0gICHa3OHBw8XIycujpKcODg/Y2t0oKCjPz8/r7e+enp/d3d4jIyNISEjf39/19vfFytKaoa93e4fO0tm9w8y4v8m2vMiytbuVnKpfX2BHSEnLz9bBx8+yusWwt8K7vcC3ub2jqrWtr7OVmKGKjp6Ag5J7fH5ucnpzdHc3ODrp6+7j5urc4OXZ3OHR1dzHzNTCx8/Cxs69wMSss76qsLywsbSoq7GbpLGfo6uanqmOkZd9gYuBhYpydYFpbHZPT1AyMzQkJCZWVdOCAAAAWnRSTlMAAgQGAikT/iUO/jwfGgj+9tPDuJBvYmAxLywfC/39+fn39fXx7+/v7evr6eXh4eHb2dnV09HPz8vLycO/u7Ovr6uhn52XgXx6enhycmhmVko4NC4uKCQcFBDgFu1nAAABOUlEQVQY02VQ1XbDMBSLw2WGtR0zMzMzc5JyytyOmfGn5zjZXib7PljHks4VpgDH/oEYad/3zJX9vQEA2nVt/kzddtpPABkSa+GMl9fPmYfI0JodMvBCu9YXX+rjXRCEJ65cC0mUMW7wv45ZZzpyuQyj+AJLXTwwSbGU02rI8t12vSQnm/yB2AABSBW7kA0x/AZS1xffYrdbMBQ/GA49Fhaln8RoTZgJtOxCI2KZ5zsPUTjlGkxHfcbVY4xYYvjQtEcKonU9F141F63uao7fpYSKIyCxO+FEshj0Rrgrn7/wbcLRnnsN4dpPMXnuDQbVlSYNCZDeMaFZaUyc3JdKN5xDhSGQbkrHzubTvVNfYp/utyZcj+HzYtWmy2zW6OVC4EBs22y0ykkpYiCDZt0koOVGEQsHHpSKdD8CZDjScMkKEQAAAABJRU5ErkJggg==); }
+.wcal_btnImgHelp		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABPlBMVEUAAAD4+PjQz8/DcmrWxMPAIx6xHxarHxWtKyC3QjiyPjW5Vk28XlU1BQDNjIXhubXr0M0AAADs1dIAAAADAwMhISGpEwu1HxefEAinGRCbEQizKB+oIxm1SD90GA++Zl3BbmZ0IxvGe3PHfnbGe3PQk40oAwAjAwDWoZves64KAQAGAADs09Cqn57hTEzcPT3mX1+0Dw/kV1fiVFTgSEiyDQ2sEAzu09DcXVviW1ntU1PrTk7nSkrjpaPsc3PpaGjoZWXXODbSLy/FIx+5FRW3ExL47u336+ry2tjotbLmrKrejIngeXbqbm3nYmLlVFLfRETcOTnaMzPXMC/KKSfEHx/79vX05uXy4d/rv7zqvLnourfinJnbhIDpeXjiY2LmXFveT07XR0XlRUXXRELgQkLeQkLVPT3KJCPDJyFgkNp7AAAALnRSTlMAAgR3EP7t4dG8t52Vd18wHBgXEgwG+fXz6enf162XiYOBdnJsYFpURjgoJB4MOubfzwAAARJJREFUGNONkMWSg0AURUMg7jburkAjwSFAiLuMu8///8B0N5ldFjmbrj5176t6L7A4xBxmNkvG1iOx/TwySAbgQy7buqrqdjiNfv6ExERT+4rSV7VfcqaIA1d7aV5LUv2O1UInfp0Kj/TbhqwockMS3qNBnEy7ww+p3bOsXuvqTQ+d4mTihxF4tmuanVpL+Bzv4anxKUNzFfPJqD3wNDNK4vpmFcnufb1T4WhmvI3rO8CB9eebpsXywtA9xMlM2YNRVpZZjv5ylvL+RnEAB7wabZ4eOF4SKsTFqggm38bjwJ6CDer/TJmIKIpeFYggmsUHwZbaWilD1nYvkcGuVCzkzo5SqePzXKFYIvwkJoggfPMHSxcsxtwO0ZoAAAAASUVORK5CYII=); }
+
+#wcal_helpBox {
+	text-align			: left;
+	font-size			: 12px;
+	background			: #ffffdd;
+	margin				: 10px 20px;
+	padding				: 5px 10px;
+}
+#wcal_helpBox strong {
+	color				: Navy;
+	font-size			: 14px;
+}
+.wcal_hide {
+	display				: none;
+}
+
+/* =====  Bottom Footer (Contacts & Info)  ================================= */
+#wcal_footer {
+    padding     		: 3px;
+    margin-top  		: 10px;
+    background  		: buttonface;
+    border-top  		: 1px inset;
+}
+
+
+/* =====  Content Area (Calendar, etc.)  ==================================== */
+table tr td {
+	margin				: 0px;
+	padding				: 0px;
+	border				: 1px black solid;
+	width				: 20px;
+	height				: 12px;
+}
+.wcal_tables {
+	margin				: 0px;
+	padding				: 0px;
+	border				: 0px;
+	border-collapse		: collapse;
+	font				: inherit;
+	margin-left			: auto; 
+    margin-right		: auto;
+	width				: 100%;
+}
+
+#wcal_schedContainer table tr td {
+	margin				: 0px;
+	padding				: 0px;
+	border				: 1px black solid;
+}
+
+/* =====  Calendar Header  ===================================== */
+
+.wcal_legendCell {
+	border				: 0;
+	padding-bottom		: 5px; 
+	font-weight			: bolder;
+	background			: white;
+}
+.wcal_headLeft, .wcal_headRight {
+	display				: inline-block;
+	width				: 20%;
+}
+.wcal_headCenter {
+	display				: inline-block;
+	width				: 59%;
+}
+.wcal_headLeft>div, .wcal_headRight>div, .wcal_headCenter>div {
+	position			: relative;
+	display				: inline-block;
+	width				: 15px;
+	height				: 12px;
+	border				: 1px solid black;
+	background-color	: transparent;
+	margin-top			: 3px;
+}
+
+#wcal_container {
+	display				: inline-block;
+	position			: relative;
+}
+
+.wcal_month {
+	text-align			: left;
+	padding				: 0 2px;
+	background			: white;
+}
+.wcal_year {
+	background			: white;
+}
+.wcal_daysBar {
+	background			: white;
+}
+.wcal_daysBar td {
+	border-top			: 2px solid black;
+	border-bottom		: 2px solid black;
+}
+.wcal_daysBar td:first-child {
+	border-left			: 0;
+}
+.wcal_daysBar:first-child td:first-child {
+	border-top			: 0;
+}
+.wcal_daysBar:last-child td:first-child {
+	border-bottom		: 0;
+	border-top			: 2px solid black;
+}
+
+.wcal_xo {
+	position			: relative;
+	overflow			: hidden;
+	height				: 100%;
+	width				: 100%;
+}
+.wcal_xo div {
+	position			: absolute;
+	height				: 100%;
+	width				: 100%;
+	overflow			: hidden;
+	z-index				: 0;
+}
+.wcal_xo img {
+	height				: 100%;
+	width				: 100%;
+}
+.wcal_xo div.wcal_con {
+	z-index				: 10;
+}
+.wcal_x {
+	background-color	: white;
+}
+.wcal_o {
+	background-color	: silver;
+}
+.wcal_blank {
+	background-color	: black;
+}
+
+
+
+/* =====  Assigned Holidays  ================================================== */
+
+
+#wcal_schedContainer {
+	display				: inline-block;
+	position			: relative;
+	margin-top			: 0.25in;
+}
+#wcal_sched .wcal_xo div:nth-child(2) {
+	padding				: 40% 0;
+}
+#wcal_sched {
+	height				: 0.75in;
+}
+#wcal_sched tr td {
+	width				: 0.5in;
+	background			: transparent;
+}
+#wcal_sched tr:first-child td:first-child {
+	width				: 0.6in;
+	font-weight			: bolder;
+}
+#wcal_sched tr:last-child td:first-child, #wcal_sched tr:first-child td:nth-child(2) {
+	width				: 0.4in;
+	font-weight			: bolder;
+}
+
+
+/* =====  Holiday Table  ==================================================== */
+#wcal_holidays  {
+	margin-top			: 0.25in;
+}
+#wcal_holidays tr td {
+	border				: 0;
+	border-bottom		: 1px solid black;
+	text-align			: left;
+	padding-left		: 10px;
+	padding-right		: 5px;
+}
+#wcal_yrLabels1, #wcal_yrLabels2 {
+	border-top			: 0;
+	border-bottom		: 2px solid black;
+	font-weight			: bolder;
+	font-size			: larger;
+}
+#wcal_holidays tr td:nth-child(3) {
+	border				: 0;
+}
+
+

@@ -1,0 +1,373 @@
+/*==========================================================================*\
+|*			Media/Printer Settings											*|
+\*--------------------------------------------------------------------------*/
+
+@media print {
+	.wcal_header, #wcal_footer { display: none; }
+	#wcal_printArea { border: none; }
+}
+
+
+
+
+/*==========================================================================*\
+|*			Page Settings													*|
+\*--------------------------------------------------------------------------*/
+
+body {
+	margin				: 0;
+	padding				: 0;
+	text-align			: center;
+}
+
+.wcal_hide {
+	display				: none;
+}
+
+
+
+
+.wcal_x {
+	background-color	: #a3ffa3;
+	color				: black;
+}
+.wcal_o {
+	background-color	: #ffe2a9;
+	color				: black;
+}
+.wcal_optHd {
+	color				: black;
+}
+.wcal_optLi {
+	background-color	: white;
+}
+.wcal_topLine {
+	border-style		: solid !important;
+	border-top-style	: solid !important;
+	border-top-width	: 2px !important;
+	border-top-color	: black !important;
+}
+.wcal_leftLine {
+	border-left-style	: solid !important;
+	border-left-width	: 2px !important;
+	border-left-color	: black !important;
+}
+.wcal_monthLabel {
+	transform			: rotate(90deg);
+	color				: black;
+}
+
+
+/*==========================================================================*\
+|*			Top Menu/Button Bar												*|
+\*--------------------------------------------------------------------------*/
+
+/*********  Toolbar Container  **********************************************/
+.wcal_header {
+	padding				: 0 0 2px 0;
+	margin				: 0;
+	background-color	: buttonface;
+	border-bottom		: 1px outset;
+	min-width			: 6.5in;
+	text-align			: center;
+}
+
+.wcal_header ul {
+	margin				: 0;
+}
+
+
+/*********  Toolbar Popdown Menu Boxes  *************************************/
+.wcal_infoBox {
+	text-align			: left;
+	font-size			: 12px;
+	background-color	: #ffffdd;
+	margin				: 10px 20px;
+	padding				: 5px 10px;
+	min-width			: 7.5in;
+	font-family			: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size			: 12px;
+}
+
+.wcal_infoBox strong {
+	color				: Navy;
+	font-size			: 14px;
+}
+
+.wcal_optionsBox {
+	text-align			: center;
+	padding				: 20px;
+}
+.wcal_optionsDisplayArea {
+	display				: inline-block;
+	vertical-align		: top;
+	background-color	: buttonface;
+}
+
+.wcal_optionsList {
+	padding-left		: 0;
+	text-align			: left;
+	display				: inline-block;
+	width				: 300px;
+}
+
+.wcal_optionsList ul {
+	padding-left		: 2em;
+}
+
+.wcal_optionsList li {
+	list-style			: none;
+	padding				: 2px 4px;
+	margin-bottom		: 2px;
+}
+
+.wcal_optSelectableLi {
+	border				: 1px solid buttonface;
+	display				: inline-block;
+	width				: 250px;
+}
+.wcal_optSelectableLi:hover {
+	background-image	: -webkit-gradient(linear,  0 0, 100% 0, from(rgba(204, 154, 129, 0)), to(#FF0));
+	background-image	: -webkit-linear-gradient(right, #ff0, rgba(204, 154, 129, 0));
+	background-image	: -moz-linear-gradient(right, #ff0, rgba(204, 154, 129, 0));
+	background-image	: -o-linear-gradient(right, #ff0, rgba(204, 154, 129, 0));
+	background-image	: -ms-linear-gradient(right, #ff0, rgba(204, 154, 129, 0));
+	background-image	: linear-gradient(to left, #ff0, rgba(204, 154, 129, 0));
+	-ms-filter			: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr=#00CC9A81, endColorstr=#FFFFFFFF)";
+	filter				: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr='#00CC9A81', endColorstr='#FFFFFFFF');
+	cursor				: pointer;
+}
+.wcal_optSelectedLi {
+	border				: 1px dashed red;
+}
+
+.wcal_colorSwatch {
+	display				: inline-block;
+	margin-left			: .5em;
+	width				: 50px;
+	height				: 3px;
+	border-top-color	: black;
+	border-top-width	: 2px;
+}
+
+.wcal_optionsList li span {
+	margin-bottom		: -2px;
+}
+.wcal_optionsList li input[type=range] {
+	width				: 60px;
+	height				: 10px;
+}
+#wcal_optLineSizeTxt {
+	display				: inline-block;
+	width				: 12px;
+	height				: 12px;
+	text-align			: center;
+}
+
+
+/* Spectrum color picker customization */
+.sp-container {
+	min-width			: 378px;
+}
+
+
+
+/*********  Toolbar Buttons  ************************************************/
+
+#wcal_nav_wrap ul li {
+	position			: relative;
+	display				: inline-block;
+	color				: #333;
+	text-decoration		: none;
+	font-weight			: 700;
+	font-size			: 12px;
+	line-height			: 32px;
+	padding				: 0;
+	font-family			: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+.wcal_header nav {
+	text-align			: center;
+	height				: 32px;
+}
+
+/*
+Styling the Toolbar Buttons
+
+Base64 Encoded Images 
+Online encoder: http://webcodertools.com/imagetobase64converter
+The following are the page's images stored internally as text to avoid 
+the loss of resources when the file is moved around or when it is 
+manipulated in other sites. To change the images, replace the existing 
+image with its encoded replacement. Note: page images may also be 
+encoded into image elements in the HTML.
+*/
+.wcal_btns {
+	background-repeat	: no-repeat;
+	background-origin	: border-box;
+	background-size		: 20px 20px;
+	padding-left		: 28px;
+	padding-right		: 6px;
+	background-position	: 5px center;
+}
+.wcal_btnImgPrint		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABF1BMVEUAAAD8/PzIyMjm5uaTk5O0tLRERERJSUnQ0NDi4uLz8/OmpqbIyMicnJ1YWFi2trYeHh43NzdgYGDQ0NB+fn6yvc2amprMzMyPj4+7u7u5ubmysrKwsLCfn5/Hx8esrKylpaXCwsK6urq6urplZWVpaWm+vr7R0dEbGxvExMQzMzPv7+/Y2Ni0w9hbgLSvr6/V1dW/v7/R0dHs7OyZmZnt7e3o6Oji4uLa2trLy8t1j7Pq6urk5OTf39/MzMzc3NzX19fOzs7GxsaPj4/x8fHO1+Pd3d2nudOzvs6ot8uWqMKOpMJ7mMC6u7t8lLZfhLagoKCVlZWAgIC+vr6JnryEmrlliLlri7ikqbGQna+jo6M8PDw7OzsULCOGAAAAK3RSTlMAAkT+ptyCexULBALm/nZWOzElGAf9+fPt6+vVz8W5ramlkYd0clAwMCwe0e6L3AAAAQ5JREFUGNNNz9d2gkAQgOFZgSBgj+m9l91EAqEYmoK9a3p5/+fILhjJd/mfmT07wNxkliRI8bpjulbHtg+XFVG8YwR2Q7Vt50RGVFx5AxNV1bSmaZ4iGtgs8BhbltexLS/YpREYFkkjHiU7LCXrOiYkzlYuWZczxQMTuxyHWy2Mt4pXbPas/ZFX1Trl+742/ty4RCDnut3BYPjyOpk8MaPhEYDkjd6m0/vU+z5A1m3fpXr9fk9AkOVwyrECtSkArP+LBucRrS4gFrXoMTGPokUtFNibePbjG4ahM+b3ItwD+iVsfo0f/syfw2NER8ulbbKyWbqW2O3Kbb62Misr7HalWjkviOIaJYqFi0pVgV83RjbPz3IxSwAAAABJRU5ErkJggg==); }
+.wcal_btnImgGoToYr		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAulBMVEUAAAD+/v6Pj49ra2uqqqrJ1rcAAADBwsEAAACpx4a/zqnL17nS3cPm7N4BAQG0z5WlvYSxxZa1yJq5y6DB0K3Y4csAAADj6tr1+PGw0ImpyYamwYGjwnqhwHmYsnesxoinv4Z6mk2nv4ahuX+swY+4yqBsgFKftoDC0a1VYkIHCgLY4cu/3Zq62pe12I2625O42Y7M5K/H4KnC36XF4aPA3qC93JqtyonQ5bbE2qW/2aK815q12JKr04PS5SsbAAAALHRSTlMAAgUHAk4kBBTzVDswEAr5qoF2X0EkHBgI/fv18e3p5cehmYt0ZmRiTEIsKnd/OjcAAAC8SURBVBjTjZDXDsMgDEWbFJqdrqzuvbNn5///Vk0soSrqQy7IMnAult1pL+GP8Nago5FqCCxngbHudvZIcn++rxlYIGsz1m+HlR+HOzijDLs22UoUTjTGoR0fh4AOmuX1VxQvPEg4qVOqVmVUnSjV+Mfu+p6kfhCEb0Xj9o43SPOiDD6K9VtIGj6zIpieG32O+1lf5YUEQiQRdFkeJYI+0jVl2ekxXR1ZNk2CIHDdWqIIKNpbDBRJPjDYGL6Ndw18NxBzPwAAAABJRU5ErkJggg==); }
+.wcal_btnImgPrevious	{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA7VBMVEUAAAD39/ejo6ORrmqdtnsAAAAvLy+PrWiguX8AAABSUlKMqWO/zqnt8uhSUlKcuHeMqWXY4csAAADr8OUAAAAPDw9/f3+mw4Cdv3Ghvn+TtGmNsF6QrmmPrmh4m0eNq2aIqF6DpVR3mUmHplqSrm2MqGWVr3Gbs3igt4C6yqPV38jU3sXk6tv3+PT19/I0NDTR5ry93KDG4K3I4rHB3qTD36mdzGWkz3SZyVuNxEew1Y2Vx1Wy1pCv1Yar0oGizW2JwT6FvzTC36G62pu22JOp0nvV6MPN37nN5LPK47LI4q/F4KeixnKgx22SxlDxX27+AAAAMHRSTlMAAgTquSMP38MWC6ZHDAfvtiYcEQ8KBv399/Hv39/f2dnTycfDwY9+dFAqKhoGBASFAyO9AAAA4UlEQVQY02WQ57KCMBBGE24TROze3u+1F1CkCQL2/v6P42YTHGY8k/zImf12Z0Mu0CK5olf/TxVwyoV1hiYI2/nUVxlK0DBJ4Kr5zVbP33KyFDs0H2ez/U4X3LB4LntwrOXCHI44THZ/Q9c9gTaGHJC5DzuKI3di2VNjjICk6qsTxyg9w2SwOCl+OxGX3twAcBBMOk4cyw5831+Axkpo0XgKw+D5gfH+9pNs1HoJvPSaYOG2v0xYE3MpyoW/1CsJ9FXxIXikmqYo94iiaDWJyUG1IsulO6Qky5WqRkVeEvBWZ/C5H05k9UrfAAAAAElFTkSuQmCC); }
+.wcal_btnImgCurrent		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA6lBMVEUAAAD9/f3Z4s2tra1cXFz09vC1tbWTsmy+zamctXkAAAAAAAAAAAB7e3vAz6vr7+T09/CowoePsGSSrmuUr26rv43b5NAEBAQfHx+avGygvX2TtmaMrWCZtXWMrF6IqFuKqWCSrW6SrmuXsHM5RyS+zak9SC3F0rHT3cTf5tTK47PH4a7D36mxypTB3qaw1YuezGeWyFfB2ae+3KGu1IXF4Kqk0HWZyV2PxEqHwDrR57u916G605+725252pa115S22ZOy1pCm0Heizm6Ux1OMw0Pa6snV6MLI4q3C36K20JWsz4CdxGmDvjEG7J3rAAAAKnRSTlMAAiQECgQC60yiJB0UBUIOB/zrzqtpIAwI+/nv6OfZx7uhn5FSSkQ8KhztNqjhAAAA6UlEQVQY012QB47CMBBFcYrZbBodtld6MQ6p9N65/3WYTCCReJIlz9N8f8kpJFN9QgySShCylmWNRuOcHM0kROi22p3eYJKWcQT7IEHALpybnKZlmKJ3Y7kAGZHEZwzkQ3zGWLJpKEph3HIWtm2/KsqPgJtmfrsbOvOl6y7Z3CqACyl9DPcHtw+sWN68F9WzztTjnHurXCkpKh7ttb/x1y/GvSjk7+RvguBcJAha+KbvfnDxfgnmYsxPzr8y8XgLNN7em3jHJKGirkuS9F+TAF2k4QO0UtY0VX0GVFXTyhWdRHlKRYRSrL4CcIgb5f9CP2IAAAAASUVORK5CYII=); }
+.wcal_btnImgNext		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAA81BMVEUAAAD9/f3BwcGLqmP09vCUr3AAAAAmJiZmZmby9e7u8umeunobGxsvLy+NqWavyZGgu3yatneVs26Qq2mkuoW9zKfL17oAAADk6tsAAABXV1coKCj09/GowomhvH+VuWSStWN1mEaMrl+PrmVrjzmNq2R5mkuJqF2Oq2aGo1yYsXWgt4CtwZLb5NDg59bS573H4K3K47HE4Km93KCNw0XA3aWw1Iu625uz15Ko0Xmjz3LD36Oey2WbymOYyVuUx1Sq0oCfzWiSxk6HwTqEvzPO5bfH4q3B16m42Zi00JS22I+r0oKq0oGpy3ugzW2cwGuawmOxS6IWAAAAL3RSTlMAAgLWDqkhDQQKBvsTEaL8+/PzqXJHNRoYFgkIBPv7+/Xv6+Xjz8/Lx5WJdlwiHnp4ILAAAADsSURBVBjTZZCHcsIwDIZll9ZOmoQyyu7ek0DThJAQ9p7v/zTIcXxwx2edTvpPHr9BQUpwSu35+tCQBD2TzqtaqaBn6lNLExWGZp3H5G7GDfu9BAQXpG7rCZNmEDwVQJC6akjsYOGH/ftvPAFFW+L5/WjgDLafNZy8bMZ4q3an6wyHzvqDoPgv8NyeEEej8O1XTP4hM1eKzs7SQIpeC3HbYRTd5eU7X88kaX/jPyqrymZ26b78KJsgEtrMznMaiOoI/eHrqFf/UsAclyIo5xXGTNMwTJOxCueUAOVVZpSLFzHFssGqnCb7aYK8eg+1cB81z4hvBgAAAABJRU5ErkJggg==); }
+.wcal_btnImgShow		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABpFBMVEUAAAD////e3t7q6ur09PQAAABvb2+gprESEhKTk5PKztUJCQnb29tkZGTOzs6GipS5v8cgISIkJCaanJ8/QEcYGBi1trkZGRoDAwPPz9AAAAAtLS3s7Oy5vcV/hZCQk5k/QEG/xM1hYWFTU1OiqLFmZmZYWFlFRkd/gYS5v8i1usRkZGS4ur68vsFvcn5jaHDCx8+Nk5yJjI9+f4AtLjDDxMiRlp1QUVGrrrJydYKXmJpQUFBUV2BHR0g+Pj5bXWMlJSaIjZRHSVEpKSm2t7k7Ozw+QEd1d3mKjZNERk0gICHa3OHBw8XIycujpKcODg/Y2t0oKCjPz8/r7e+enp/d3d4jIyNISEjf39/19vfFytKaoa93e4fO0tm9w8y4v8m2vMiytbuVnKpfX2BHSEnLz9bBx8+yusWwt8K7vcC3ub2jqrWtr7OVmKGKjp6Ag5J7fH5ucnpzdHc3ODrp6+7j5urc4OXZ3OHR1dzHzNTCx8/Cxs69wMSss76qsLywsbSoq7GbpLGfo6uanqmOkZd9gYuBhYpydYFpbHZPT1AyMzQkJCZWVdOCAAAAWnRSTlMAAgQGAikT/iUO/jwfGgj+9tPDuJBvYmAxLywfC/39+fn39fXx7+/v7evr6eXh4eHb2dnV09HPz8vLycO/u7Ovr6uhn52XgXx6enhycmhmVko4NC4uKCQcFBDgFu1nAAABOUlEQVQY02VQ1XbDMBSLw2WGtR0zMzMzc5JyytyOmfGn5zjZXib7PljHks4VpgDH/oEYad/3zJX9vQEA2nVt/kzddtpPABkSa+GMl9fPmYfI0JodMvBCu9YXX+rjXRCEJ65cC0mUMW7wv45ZZzpyuQyj+AJLXTwwSbGU02rI8t12vSQnm/yB2AABSBW7kA0x/AZS1xffYrdbMBQ/GA49Fhaln8RoTZgJtOxCI2KZ5zsPUTjlGkxHfcbVY4xYYvjQtEcKonU9F141F63uao7fpYSKIyCxO+FEshj0Rrgrn7/wbcLRnnsN4dpPMXnuDQbVlSYNCZDeMaFZaUyc3JdKN5xDhSGQbkrHzubTvVNfYp/utyZcj+HzYtWmy2zW6OVC4EBs22y0ykkpYiCDZt0koOVGEQsHHpSKdD8CZDjScMkKEQAAAABJRU5ErkJggg==); }
+.wcal_btnImgHelp		{ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAABPlBMVEUAAAD4+PjQz8/DcmrWxMPAIx6xHxarHxWtKyC3QjiyPjW5Vk28XlU1BQDNjIXhubXr0M0AAADs1dIAAAADAwMhISGpEwu1HxefEAinGRCbEQizKB+oIxm1SD90GA++Zl3BbmZ0IxvGe3PHfnbGe3PQk40oAwAjAwDWoZves64KAQAGAADs09Cqn57hTEzcPT3mX1+0Dw/kV1fiVFTgSEiyDQ2sEAzu09DcXVviW1ntU1PrTk7nSkrjpaPsc3PpaGjoZWXXODbSLy/FIx+5FRW3ExL47u336+ry2tjotbLmrKrejIngeXbqbm3nYmLlVFLfRETcOTnaMzPXMC/KKSfEHx/79vX05uXy4d/rv7zqvLnourfinJnbhIDpeXjiY2LmXFveT07XR0XlRUXXRELgQkLeQkLVPT3KJCPDJyFgkNp7AAAALnRSTlMAAgR3EP7t4dG8t52Vd18wHBgXEgwG+fXz6enf162XiYOBdnJsYFpURjgoJB4MOubfzwAAARJJREFUGNONkMWSg0AURUMg7jburkAjwSFAiLuMu8///8B0N5ldFjmbrj5176t6L7A4xBxmNkvG1iOx/TwySAbgQy7buqrqdjiNfv6ExERT+4rSV7VfcqaIA1d7aV5LUv2O1UInfp0Kj/TbhqwockMS3qNBnEy7ww+p3bOsXuvqTQ+d4mTihxF4tmuanVpL+Bzv4anxKUNzFfPJqD3wNDNK4vpmFcnufb1T4WhmvI3rO8CB9eebpsXywtA9xMlM2YNRVpZZjv5ylvL+RnEAB7wabZ4eOF4SKsTFqggm38bjwJ6CDer/TJmIKIpeFYggmsUHwZbaWilD1nYvkcGuVCzkzo5SqePzXKFYIvwkJoggfPMHSxcsxtwO0ZoAAAAASUVORK5CYII=); }
+
+.wcal_header button  {
+	background-repeat	: no-repeat; 
+	height				: 30px; 
+	vertical-align		: middle; 
+	font-size			: 12px;
+	background-color	: #e9e9e9;
+	border				: 1px solid #a0a0a0;
+	display				: inline-block;
+}
+#wcal_input {
+	width				: 33px;
+	height				: 20px;
+	padding				: 4px 4px;
+	text-align			: center;
+	vertical-align		: middle;
+	border				: 1px solid ButtonShadow;
+	border-right		: 0;
+}
+
+
+
+
+
+/*==========================================================================*\
+|*			Content Settings												*|
+\*--------------------------------------------------------------------------*/
+
+#wcal_printArea {
+	display				: inline-block;
+	width				: 100%;
+	max-width			: 8in;
+	min-width			: 8in;
+	height				: 9.5in;
+	font				: inherit;
+	text-align			: center;
+	font-family			: Arial;
+	font-size   		: 10px;
+	background-color	: white;
+	border				: 1px dashed silver;
+	margin				: 0;
+}
+
+#wcal_printArea * {
+	margin				: 0;
+	padding				: 0;
+}
+
+#wcal_printArea td, #wcal_printArea th, #wcal_printArea table {
+	border-collapse		: collapse;
+}
+#wcal_printArea table {
+	height				: 100% !important;
+	max-height			: 100% !important;
+	min-height			: 100% !important;
+}
+#wcal_printArea td {
+	border				: 1px black solid;
+	width				: 30px;
+	height				: 9px;
+}
+#wcal_printArea tr td:first-child, #wcal_printArea tr th:first-child {
+	max-width			: 12px !important;
+}
+.wcal_padwk td {
+	border-left			: 0 !important;
+	border-right		: 0 !important;
+}
+
+.wcal_xo {
+	position			: relative;
+	overflow			: hidden;
+	height				: 100%;
+	width				: 100%;
+}
+.wcal_xo div {
+	position			: absolute;
+	height				: 100%;
+	width				: 100%;
+	overflow			: hidden;
+	z-index				: 0;
+}
+.wcal_xo img {
+	height				: 100%;
+	width				: 100%;
+}
+
+.wcal_xo canvas {
+	height				: 100%;
+	width				: 100%;
+}
+
+.wcal_card {
+	width				: 1.875in !important;
+	min-width			: 1.875in !important;
+	max-width			: 1.875in !important;
+	height				: 3.125in !important;
+	min-height			: 3.125in !important;
+	max-height			: 3.125in !important;
+	overflow			: hidden;
+	font-size			: 9px;
+	text-align			: center;
+	vertical-align		: baseline;
+	display				: inline-block;
+	border				: 1px solid black;
+}
+
+.wcal_cardSetFB {
+	display				: inline;
+}
+.wcal_cardSets {
+	text-align			: justify;
+	display				: inline;
+}
+
+
+.wcal_con_x {
+	z-index				: 10;
+	background-color	: transparent !important;
+}
+.wcal_con_o {
+	z-index				: 10;
+	background-color	: transparent !important;
+}
+.wcal_hd {
+	color				: black;
+	border-color		: black;
+	border-width		: 1px;
+}
+#wcal_optHeaderBorderColor .wcal_colorSwatch {
+	border				: 0;
+	border-style		: none;
+	border-top-style	: solid;
+	border-top-width	: 3px;
+	border-top-color	: black;
+	padding-top			: 1px;
+}
+
+
+
+
+
+/*==========================================================================*\
+|*			Bottom Footer (Contacts & Info)									*|
+\*--------------------------------------------------------------------------*/
+
+#wcal_footer {
+	padding     		: 3px;
+	margin-top  		: 0;
+	background-color  	: buttonface;
+	border-top  		: 1px inset;
+}
+

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Brent Starks, bstarks(AT)utah.gov" />
+	<meta name="author" content="Brent Starks, grumpily(AT)gmail.com" />
+	
+	<title>CUCF X/O Squad Work Calendar (2 Yr.)</title>
+
+
+	<script>
+		if( !jQuery ) {
+// Zepto 1.1.4 (generated with Zepto Builder) - zepto selector - zeptojs.com/license 
+var Zepto=function(){function t(t){return null==t?t+"":W[X.call(t)]||"object"}function n(n){return"function"==t(n)}function e(t){return null!=t&&t==t.window}function i(t){return null!=t&&t.nodeType==t.DOCUMENT_NODE}function r(n){return"object"==t(n)}function s(t){return r(t)&&!e(t)&&Object.getPrototypeOf(t)==Object.prototype}function o(t){return"number"==typeof t.length}function u(t){return $.call(t,function(t){return null!=t})}function c(t){return t.length>0?C.fn.concat.apply([],t):t}function a(t){return t.replace(/::/g,"/").replace(/([A-Z]+)([A-Z][a-z])/g,"$1_$2").replace(/([a-z\d])([A-Z])/g,"$1_$2").replace(/_/g,"-").toLowerCase()}function l(t){return t in M?M[t]:M[t]=RegExp("(^|\\s)"+t+"(\\s|$)")}function h(t,n){return"number"!=typeof n||q[a(t)]?n:n+"px"}function f(t){var n,e;return j[t]||(n=P.createElement(t),P.body.appendChild(n),e=getComputedStyle(n,"").getPropertyValue("display"),n.parentNode.removeChild(n),"none"==e&&(e="block"),j[t]=e),j[t]}function p(t){return"children"in t?L.call(t.children):C.map(t.childNodes,function(t){return 1==t.nodeType?t:E})}function d(t,n){var e,i=t?t.length:0;for(e=0;i>e;e++)this[e]=t[e];this.length=i,this.selector=n||""}function m(t,n,e){for(x in n)e&&(s(n[x])||Q(n[x]))?(s(n[x])&&!s(t[x])&&(t[x]={}),Q(n[x])&&!Q(t[x])&&(t[x]=[]),m(t[x],n[x],e)):n[x]!==E&&(t[x]=n[x])}function g(t,n){return null==n?C(t):C(t).filter(n)}function v(t,e,i,r){return n(e)?e.call(t,i,r):e}function y(t,n,e){null==e?t.removeAttribute(n):t.setAttribute(n,e)}function w(t,n){var e=t.className||"",i=e&&e.baseVal!==E;return n===E?i?e.baseVal:e:(i?e.baseVal=n:t.className=n,E)}function b(t){try{return t?"true"==t||("false"==t?!1:"null"==t?null:+t+""==t?+t:/^[\[\{]/.test(t)?C.parseJSON(t):t):t}catch(n){return t}}function N(t,n){n(t);for(var e=0,i=t.childNodes.length;i>e;e++)N(t.childNodes[e],n)}var E,x,C,O,T,A,S=[],Z=S.concat,$=S.filter,L=S.slice,P=window.document,j={},M={},q={"column-count":1,columns:1,"font-weight":1,"line-height":1,opacity:1,"z-index":1,zoom:1},B=/^\s*<(\w+|!)[^>]*>/,z=/^<(\w+)\s*\/?>(?:<\/\1>|)$/,k=/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/gi,R=/^(?:body|html)$/i,V=/([A-Z])/g,F=["val","css","html","text","data","width","height","offset"],D=["after","prepend","before","append"],H=P.createElement("table"),I=P.createElement("tr"),J={tr:P.createElement("tbody"),tbody:H,thead:H,tfoot:H,td:I,th:I,"*":P.createElement("div")},U=/complete|loaded|interactive/,_=/^[\w-]*$/,W={},X=W.toString,Y={},G=P.createElement("div"),K={tabindex:"tabIndex",readonly:"readOnly","for":"htmlFor","class":"className",maxlength:"maxLength",cellspacing:"cellSpacing",cellpadding:"cellPadding",rowspan:"rowSpan",colspan:"colSpan",usemap:"useMap",frameborder:"frameBorder",contenteditable:"contentEditable"},Q=Array.isArray||function(t){return t instanceof Array};return Y.matches=function(t,n){if(!n||!t||1!==t.nodeType)return!1;var e=t.webkitMatchesSelector||t.mozMatchesSelector||t.oMatchesSelector||t.matchesSelector;if(e)return e.call(t,n);var i,r=t.parentNode,s=!r;return s&&(r=G).appendChild(t),i=~Y.qsa(r,n).indexOf(t),s&&G.removeChild(t),i},T=function(t){return t.replace(/-+(.)?/g,function(t,n){return n?n.toUpperCase():""})},A=function(t){return $.call(t,function(n,e){return t.indexOf(n)==e})},Y.fragment=function(t,n,e){var i,r,o;return z.test(t)&&(i=C(P.createElement(RegExp.$1))),i||(t.replace&&(t=t.replace(k,"<$1></$2>")),n===E&&(n=B.test(t)&&RegExp.$1),n in J||(n="*"),o=J[n],o.innerHTML=""+t,i=C.each(L.call(o.childNodes),function(){o.removeChild(this)})),s(e)&&(r=C(i),C.each(e,function(t,n){F.indexOf(t)>-1?r[t](n):r.attr(t,n)})),i},Y.Z=function(t,n){return new d(t,n)},Y.isZ=function(t){return t instanceof Y.Z},Y.init=function(t,e){var i;if(!t)return Y.Z();if("string"==typeof t)if(t=t.trim(),"<"==t[0]&&B.test(t))i=Y.fragment(t,RegExp.$1,e),t=null;else{if(e!==E)return C(e).find(t);i=Y.qsa(P,t)}else{if(n(t))return C(P).ready(t);if(Y.isZ(t))return t;if(Q(t))i=u(t);else if(r(t))i=[t],t=null;else if(B.test(t))i=Y.fragment(t.trim(),RegExp.$1,e),t=null;else{if(e!==E)return C(e).find(t);i=Y.qsa(P,t)}}return Y.Z(i,t)},C=function(t,n){return Y.init(t,n)},C.extend=function(t){var n,e=L.call(arguments,1);return"boolean"==typeof t&&(n=t,t=e.shift()),e.forEach(function(e){m(t,e,n)}),t},Y.qsa=function(t,n){var e,i="#"==n[0],r=!i&&"."==n[0],s=i||r?n.slice(1):n,o=_.test(s);return t.getElementById&&o&&i?(e=t.getElementById(s))?[e]:[]:1!==t.nodeType&&9!==t.nodeType&&11!==t.nodeType?[]:L.call(o&&!i&&t.getElementsByClassName?r?t.getElementsByClassName(s):t.getElementsByTagName(n):t.querySelectorAll(n))},C.contains=P.documentElement.contains?function(t,n){return t!==n&&t.contains(n)}:function(t,n){for(;n&&(n=n.parentNode);)if(n===t)return!0;return!1},C.type=t,C.isFunction=n,C.isWindow=e,C.isArray=Q,C.isPlainObject=s,C.isEmptyObject=function(t){var n;for(n in t)return!1;return!0},C.inArray=function(t,n,e){return S.indexOf.call(n,t,e)},C.camelCase=T,C.trim=function(t){return null==t?"":String.prototype.trim.call(t)},C.uuid=0,C.support={},C.expr={},C.noop=function(){},C.map=function(t,n){var e,i,r,s=[];if(o(t))for(i=0;t.length>i;i++)e=n(t[i],i),null!=e&&s.push(e);else for(r in t)e=n(t[r],r),null!=e&&s.push(e);return c(s)},C.each=function(t,n){var e,i;if(o(t)){for(e=0;t.length>e;e++)if(n.call(t[e],e,t[e])===!1)return t}else for(i in t)if(n.call(t[i],i,t[i])===!1)return t;return t},C.grep=function(t,n){return $.call(t,n)},window.JSON&&(C.parseJSON=JSON.parse),C.each("Boolean Number String Function Array Date RegExp Object Error".split(" "),function(t,n){W["[object "+n+"]"]=n.toLowerCase()}),C.fn={constructor:Y.Z,length:0,forEach:S.forEach,reduce:S.reduce,push:S.push,sort:S.sort,splice:S.splice,indexOf:S.indexOf,concat:function(){var t,n,e=[];for(t=0;arguments.length>t;t++)n=arguments[t],e[t]=Y.isZ(n)?n.toArray():n;return Z.apply(Y.isZ(this)?this.toArray():this,e)},map:function(t){return C(C.map(this,function(n,e){return t.call(n,e,n)}))},slice:function(){return C(L.apply(this,arguments))},ready:function(t){return U.test(P.readyState)&&P.body?t(C):P.addEventListener("DOMContentLoaded",function(){t(C)},!1),this},get:function(t){return t===E?L.call(this):this[t>=0?t:t+this.length]},toArray:function(){return this.get()},size:function(){return this.length},remove:function(){return this.each(function(){null!=this.parentNode&&this.parentNode.removeChild(this)})},each:function(t){return S.every.call(this,function(n,e){return t.call(n,e,n)!==!1}),this},filter:function(t){return n(t)?this.not(this.not(t)):C($.call(this,function(n){return Y.matches(n,t)}))},add:function(t,n){return C(A(this.concat(C(t,n))))},is:function(t){return this.length>0&&Y.matches(this[0],t)},not:function(t){var e=[];if(n(t)&&t.call!==E)this.each(function(n){t.call(this,n)||e.push(this)});else{var i="string"==typeof t?this.filter(t):o(t)&&n(t.item)?L.call(t):C(t);this.forEach(function(t){0>i.indexOf(t)&&e.push(t)})}return C(e)},has:function(t){return this.filter(function(){return r(t)?C.contains(this,t):C(this).find(t).size()})},eq:function(t){return-1===t?this.slice(t):this.slice(t,+t+1)},first:function(){var t=this[0];return t&&!r(t)?t:C(t)},last:function(){var t=this[this.length-1];return t&&!r(t)?t:C(t)},find:function(t){var n,e=this;return n=t?"object"==typeof t?C(t).filter(function(){var t=this;return S.some.call(e,function(n){return C.contains(n,t)})}):1==this.length?C(Y.qsa(this[0],t)):this.map(function(){return Y.qsa(this,t)}):C()},closest:function(t,n){var e=this[0],r=!1;for("object"==typeof t&&(r=C(t));e&&!(r?r.indexOf(e)>=0:Y.matches(e,t));)e=e!==n&&!i(e)&&e.parentNode;return C(e)},parents:function(t){for(var n=[],e=this;e.length>0;)e=C.map(e,function(t){return(t=t.parentNode)&&!i(t)&&0>n.indexOf(t)?(n.push(t),t):E});return g(n,t)},parent:function(t){return g(A(this.pluck("parentNode")),t)},children:function(t){return g(this.map(function(){return p(this)}),t)},contents:function(){return this.map(function(){return this.contentDocument||L.call(this.childNodes)})},siblings:function(t){return g(this.map(function(t,n){return $.call(p(n.parentNode),function(t){return t!==n})}),t)},empty:function(){return this.each(function(){this.innerHTML=""})},pluck:function(t){return C.map(this,function(n){return n[t]})},show:function(){return this.each(function(){"none"==this.style.display&&(this.style.display=""),"none"==getComputedStyle(this,"").getPropertyValue("display")&&(this.style.display=f(this.nodeName))})},replaceWith:function(t){return this.before(t).remove()},wrap:function(t){var e=n(t);if(this[0]&&!e)var i=C(t).get(0),r=i.parentNode||this.length>1;return this.each(function(n){C(this).wrapAll(e?t.call(this,n):r?i.cloneNode(!0):i)})},wrapAll:function(t){if(this[0]){C(this[0]).before(t=C(t));for(var n;(n=t.children()).length;)t=n.first();C(t).append(this)}return this},wrapInner:function(t){var e=n(t);return this.each(function(n){var i=C(this),r=i.contents(),s=e?t.call(this,n):t;r.length?r.wrapAll(s):i.append(s)})},unwrap:function(){return this.parent().each(function(){C(this).replaceWith(C(this).children())}),this},clone:function(){return this.map(function(){return this.cloneNode(!0)})},hide:function(){return this.css("display","none")},toggle:function(t){return this.each(function(){var n=C(this);(t===E?"none"==n.css("display"):t)?n.show():n.hide()})},prev:function(t){return C(this.pluck("previousElementSibling")).filter(t||"*")},next:function(t){return C(this.pluck("nextElementSibling")).filter(t||"*")},html:function(t){return 0 in arguments?this.each(function(n){var e=this.innerHTML;C(this).empty().append(v(this,t,n,e))}):0 in this?this[0].innerHTML:null},text:function(t){return 0 in arguments?this.each(function(n){var e=v(this,t,n,this.textContent);this.textContent=null==e?"":""+e}):0 in this?this[0].textContent:null},attr:function(t,n){var e;return"string"!=typeof t||1 in arguments?this.each(function(e){if(1===this.nodeType)if(r(t))for(x in t)y(this,x,t[x]);else y(this,t,v(this,n,e,this.getAttribute(t)))}):this.length&&1===this[0].nodeType?!(e=this[0].getAttribute(t))&&t in this[0]?this[0][t]:e:E},removeAttr:function(t){return this.each(function(){1===this.nodeType&&t.split(" ").forEach(function(t){y(this,t)},this)})},prop:function(t,n){return t=K[t]||t,1 in arguments?this.each(function(e){this[t]=v(this,n,e,this[t])}):this[0]&&this[0][t]},data:function(t,n){var e="data-"+t.replace(V,"-$1").toLowerCase(),i=1 in arguments?this.attr(e,n):this.attr(e);return null!==i?b(i):E},val:function(t){return 0 in arguments?this.each(function(n){this.value=v(this,t,n,this.value)}):this[0]&&(this[0].multiple?C(this[0]).find("option").filter(function(){return this.selected}).pluck("value"):this[0].value)},offset:function(t){if(t)return this.each(function(n){var e=C(this),i=v(this,t,n,e.offset()),r=e.offsetParent().offset(),s={top:i.top-r.top,left:i.left-r.left};"static"==e.css("position")&&(s.position="relative"),e.css(s)});if(!this.length)return null;var n=this[0].getBoundingClientRect();return{left:n.left+window.pageXOffset,top:n.top+window.pageYOffset,width:Math.round(n.width),height:Math.round(n.height)}},css:function(n,e){if(2>arguments.length){var i,r=this[0];if(!r)return;if(i=getComputedStyle(r,""),"string"==typeof n)return r.style[T(n)]||i.getPropertyValue(n);if(Q(n)){var s={};return C.each(n,function(t,n){s[n]=r.style[T(n)]||i.getPropertyValue(n)}),s}}var o="";if("string"==t(n))e||0===e?o=a(n)+":"+h(n,e):this.each(function(){this.style.removeProperty(a(n))});else for(x in n)n[x]||0===n[x]?o+=a(x)+":"+h(x,n[x])+";":this.each(function(){this.style.removeProperty(a(x))});return this.each(function(){this.style.cssText+=";"+o})},index:function(t){return t?this.indexOf(C(t)[0]):this.parent().children().indexOf(this[0])},hasClass:function(t){return t?S.some.call(this,function(t){return this.test(w(t))},l(t)):!1},addClass:function(t){return t?this.each(function(n){if("className"in this){O=[];var e=w(this),i=v(this,t,n,e);i.split(/\s+/g).forEach(function(t){C(this).hasClass(t)||O.push(t)},this),O.length&&w(this,e+(e?" ":"")+O.join(" "))}}):this},removeClass:function(t){return this.each(function(n){if("className"in this){if(t===E)return w(this,"");O=w(this),v(this,t,n,O).split(/\s+/g).forEach(function(t){O=O.replace(l(t)," ")}),w(this,O.trim())}})},toggleClass:function(t,n){return t?this.each(function(e){var i=C(this),r=v(this,t,e,w(this));r.split(/\s+/g).forEach(function(t){(n===E?!i.hasClass(t):n)?i.addClass(t):i.removeClass(t)})}):this},scrollTop:function(t){if(this.length){var n="scrollTop"in this[0];return t===E?n?this[0].scrollTop:this[0].pageYOffset:this.each(n?function(){this.scrollTop=t}:function(){this.scrollTo(this.scrollX,t)})}},scrollLeft:function(t){if(this.length){var n="scrollLeft"in this[0];return t===E?n?this[0].scrollLeft:this[0].pageXOffset:this.each(n?function(){this.scrollLeft=t}:function(){this.scrollTo(t,this.scrollY)})}},position:function(){if(this.length){var t=this[0],n=this.offsetParent(),e=this.offset(),i=R.test(n[0].nodeName)?{top:0,left:0}:n.offset();return e.top-=parseFloat(C(t).css("margin-top"))||0,e.left-=parseFloat(C(t).css("margin-left"))||0,i.top+=parseFloat(C(n[0]).css("border-top-width"))||0,i.left+=parseFloat(C(n[0]).css("border-left-width"))||0,{top:e.top-i.top,left:e.left-i.left}}},offsetParent:function(){return this.map(function(){for(var t=this.offsetParent||P.body;t&&!R.test(t.nodeName)&&"static"==C(t).css("position");)t=t.offsetParent;return t})}},C.fn.detach=C.fn.remove,["width","height"].forEach(function(t){var n=t.replace(/./,function(t){return t[0].toUpperCase()});C.fn[t]=function(r){var s,o=this[0];return r===E?e(o)?o["inner"+n]:i(o)?o.documentElement["scroll"+n]:(s=this.offset())&&s[t]:this.each(function(n){o=C(this),o.css(t,v(this,r,n,o[t]()))})}}),D.forEach(function(n,e){var i=e%2;C.fn[n]=function(){var n,r,s=C.map(arguments,function(e){return n=t(e),"object"==n||"array"==n||null==e?e:Y.fragment(e)}),o=this.length>1;return 1>s.length?this:this.each(function(t,n){r=i?n:n.parentNode,n=0==e?n.nextSibling:1==e?n.firstChild:2==e?n:null;var u=C.contains(P.documentElement,r);s.forEach(function(t){if(o)t=t.cloneNode(!0);else if(!r)return C(t).remove();r.insertBefore(t,n),u&&N(t,function(t){null==t.nodeName||"SCRIPT"!==t.nodeName.toUpperCase()||t.type&&"text/javascript"!==t.type||t.src||window.eval.call(window,t.innerHTML)})})})},C.fn[i?n+"To":"insert"+(e?"Before":"After")]=function(t){return C(t)[n](this),this}}),Y.Z.prototype=d.prototype=C.fn,Y.uniq=A,Y.deserializeValue=b,C.zepto=Y,C}();window.Zepto=Zepto,void 0===window.$&&(window.$=Zepto),function(t){function n(n){return n=t(n),!(!n.width()&&!n.height())&&"none"!==n.css("display")}function e(t,n){t=t.replace(/=#\]/g,'="#"]');var e,i,r=u.exec(t);if(r&&r[2]in o&&(e=o[r[2]],i=r[3],t=r[1],i)){var s=Number(i);i=isNaN(s)?i.replace(/^["']|["']$/g,""):s}return n(t,e,i)}var i=t.zepto,r=i.qsa,s=i.matches,o=t.expr[":"]={visible:function(){return n(this)?this:void 0},hidden:function(){return n(this)?void 0:this},selected:function(){return this.selected?this:void 0},checked:function(){return this.checked?this:void 0},parent:function(){return this.parentNode},first:function(t){return 0===t?this:void 0},last:function(t,n){return t===n.length-1?this:void 0},eq:function(t,n,e){return t===e?this:void 0},contains:function(n,e,i){return t(this).text().indexOf(i)>-1?this:void 0},has:function(t,n,e){return i.qsa(this,e).length?this:void 0}},u=RegExp("(.*):(\\w+)(?:\\(([^)]+)\\))?$\\s*"),c=/^\s*>/,a="Zepto"+ +new Date;i.qsa=function(n,s){return e(s,function(e,o,u){try{var l;!e&&o?e="*":c.test(e)&&(l=t(n).addClass(a),e="."+a+" "+e);var h=r(n,e)}catch(f){throw console.error("error performing selector: %o",s),f}finally{l&&l.removeClass(a)}return o?i.uniq(t.map(h,function(t,n){return o.call(t,n,h,u)})):h})},i.matches=function(t,n){return e(n,function(n,e,i){return!(n&&!s(t,n)||e&&e.call(t,null,i)!==t)})}}(Zepto);
+var $=Zepto;
+		}
+	</script>
+	<!-- 
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script> -->
+	<script type="text/javascript" src="udcCal.js"></script>
+	<link type="text/css" rel="Stylesheet" href="udcCal.css" />
+
+</head>
+
+
+<body>
+
+<header id="wcal_toolbar" class="wcal_header">
+	<button onclick="id0.wcal.tb.print()">
+		<img alt="Print Button" src="" />
+		Print
+	</button>
+	&nbsp;|&nbsp; 
+	<input id="wcal_input" type="text" onchange="id0.wcal.tb.gotoCal(+this.value)" onclick="this.select()" /><!--
+	--><button onclick="id0.wcal.tb.gotoCal(+$('#'+'wcal_input').attr('value'))">
+		<img alt="Go To Year Button" src="" />
+		Go To Year
+	</button>
+	&nbsp;|&nbsp;
+	<button onclick="id0.wcal.tb.previous()" title="Go to previous year's calendars stepping two years at a time.">
+		<img alt="Previous Year Button" src="" />
+		Previous
+	</button>
+	<button onclick="id0.wcal.tb.now()" title="Get the current year's calendar.">
+		<img alt="Current Year Button" src="" />
+		Current
+	</button>
+	<button onclick="id0.wcal.tb.next()" title="Go to future year's calendars stepping two years at a time.">
+		<img alt="Next Year Button" src="" />
+		Next
+	</button>
+	&nbsp;|&nbsp;
+	<div id="dd" class="wrapper-dropdown-4">
+		<span>
+			<img alt="View Button" src="" />
+			View
+		</span>
+		<ul class="dropdown">
+			<li><input type="checkbox" id="wcal_view1" name="wcal_view" class="wcal_view" value="wcal_table">	<label for="wcal_view1">Calendars</label></li>
+			<li><input type="checkbox" id="wcal_view2" name="wcal_view" class="wcal_view" value="wcal_holidays"><label for="wcal_view2">Holiday Lists</label></li>
+			<li><input type="checkbox" id="wcal_view3" name="wcal_view" class="wcal_view" value="wcal_sched">	<label for="wcal_view3">Assigned Holidays</label></li>
+		</ul>
+	</div>
+	&nbsp;|&nbsp;
+	<button onclick="id0.wcal.tb.help('2yrCal')">
+		<img alt="Help Button" src="" />
+		Help
+	</button>
+	<!--&nbsp;|&nbsp;-->
+
+	<section id="help" class="hide">
+		<p><strong>Print</strong> - Click to open the print dialogue.</p>
+		<p><strong>Go To Year</strong> - Enter the desired year in the text box in front of the <strong>Go To Year</strong> button and then click on the <strong>Go To Year</strong> button to start the calendar on the desired year.</p>
+		<p><strong>Previous</strong> - Click to start the calendar two years before the year currently shown on the calendar. Each click steps two more years into the past.</p>
+		<p><strong>Current</strong> - Click to restore the displayed caledar to the current year.</p>
+		<p><strong>Next</strong> - Click to start the calendar two years farther into the future than the year currently shown on the calendar. Each click steps two more years into the future.</p>
+		<p><strong>View</strong> - Click to select which items to display with the calendar.</p>
+		<p><strong>Help</strong> - Click to see or hide this help dialogue.</p>
+		<hr />
+		<p>This calendar was created by <a href="mailto:grumpily@gmail.com?subject=Work Calendar">Brent Starks</a> at <a href="mailto:grumpily@gmail.com?subject=Work Calendar">grumpily@gmail.com</a>. This is the person to contact regarding any issues or feature requests with this calendar. Please include the name and email address of the maintainer of the web page containing this calendar.</p>
+		<p>Web page maintainers may find other more compatible versions of the calendar (and other resources) at <a href="http://id0.org/cucf/">http://id0.org/cucf/</a>.</p>
+	</section>
+
+</header>
+
+
+<section id="wcal_">
+	
+<div id="wcal_container">
+	<table id="wcal_table">
+		<thead>
+			<tr>
+				<td colspan="33" class="wcal_legendCell">
+					<h1 id="wcal_title"></h1>
+
+					<span class="wcal_headLeft">X-Squad Works</span>
+					<span class="wcal_headCenter">Paydays</span>
+					<span class="wcal_headRight">O-Squad Works</span>
+					<br />
+
+					<div class="wcal_headLeft">
+						<div class="wcal_shade1x1">&nbsp;</div>
+					</div>
+					<div class="wcal_headCenter">
+						<div>
+							<img alt="" class="wcal_calHeadShading" src="" />
+							<span>F$</span>
+						</div>
+						&nbsp;or&nbsp;
+						<div class="wcal_white1x1">
+							F$
+						</div>
+					</div>
+					<div class="wcal_headRight">
+						<div>
+							&nbsp;
+							<img alt="" class="wcal_calHeadShading" src="" />
+						</div>
+					</div>
+				</td>
+			</tr>
+		</thead>
+		<tbody id="wcal_body">
+			<tr class="wcal_daysBar">
+				<td colspan="2"></td>
+				<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+				<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+				<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+			</tr>
+			<!--			-->
+			<tr>
+				<td rowspan="12" class="wcal_year" id="wcal_yrLabel1"></td><td class="wcal_month">January</td>
+				<td id="d1_1_1"></td><td id="d1_1_2"></td><td id="d1_1_3"></td><td id="d1_1_4"></td><td id="d1_1_5"></td><td id="d1_1_6"></td><td id="d1_1_7"></td><td id="d1_1_8"></td><td id="d1_1_9"></td><td id="d1_1_10"></td>
+				<td id="d1_1_11"></td><td id="d1_1_12"></td><td id="d1_1_13"></td><td id="d1_1_14"></td><td id="d1_1_15"></td><td id="d1_1_16"></td><td id="d1_1_17"></td><td id="d1_1_18"></td><td id="d1_1_19"></td><td id="d1_1_20"></td>
+				<td id="d1_1_21"></td><td id="d1_1_22"></td><td id="d1_1_23"></td><td id="d1_1_24"></td><td id="d1_1_25"></td><td id="d1_1_26"></td><td id="d1_1_27"></td><td id="d1_1_28"></td><td id="d1_1_29"></td><td id="d1_1_30"></td><td id="d1_1_31"></td>
+			
+			</tr>
+			<tr>
+				<td class="wcal_month">February</td>
+				<td id="d1_2_1"></td><td id="d1_2_2"></td><td id="d1_2_3"></td><td id="d1_2_4"></td><td id="d1_2_5"></td><td id="d1_2_6"></td><td id="d1_2_7"></td><td id="d1_2_8"></td><td id="d1_2_9"></td><td id="d1_2_10"></td>
+				<td id="d1_2_11"></td><td id="d1_2_12"></td><td id="d1_2_13"></td><td id="d1_2_14"></td><td id="d1_2_15"></td><td id="d1_2_16"></td><td id="d1_2_17"></td><td id="d1_2_18"></td><td id="d1_2_19"></td><td id="d1_2_20"></td>
+				<td id="d1_2_21"></td><td id="d1_2_22"></td><td id="d1_2_23"></td><td id="d1_2_24"></td><td id="d1_2_25"></td><td id="d1_2_26"></td><td id="d1_2_27"></td><td id="d1_2_28"></td><td id="d1_2_29" class="wcal_blank"></td><td class="wcal_blank"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">March</td>
+				<td id="d1_3_1"></td><td id="d1_3_2"></td><td id="d1_3_3"></td><td id="d1_3_4"></td><td id="d1_3_5"></td><td id="d1_3_6"></td><td id="d1_3_7"></td><td id="d1_3_8"></td><td id="d1_3_9"></td><td id="d1_3_10"></td>
+				<td id="d1_3_11"></td><td id="d1_3_12"></td><td id="d1_3_13"></td><td id="d1_3_14"></td><td id="d1_3_15"></td><td id="d1_3_16"></td><td id="d1_3_17"></td><td id="d1_3_18"></td><td id="d1_3_19"></td><td id="d1_3_20"></td>
+				<td id="d1_3_21"></td><td id="d1_3_22"></td><td id="d1_3_23"></td><td id="d1_3_24"></td><td id="d1_3_25"></td><td id="d1_3_26"></td><td id="d1_3_27"></td><td id="d1_3_28"></td><td id="d1_3_29"></td><td id="d1_3_30"></td><td id="d1_3_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">April</td>
+				<td id="d1_4_1"></td><td id="d1_4_2"></td><td id="d1_4_3"></td><td id="d1_4_4"></td><td id="d1_4_5"></td><td id="d1_4_6"></td><td id="d1_4_7"></td><td id="d1_4_8"></td><td id="d1_4_9"></td><td id="d1_4_10"></td>
+				<td id="d1_4_11"></td><td id="d1_4_12"></td><td id="d1_4_13"></td><td id="d1_4_14"></td><td id="d1_4_15"></td><td id="d1_4_16"></td><td id="d1_4_17"></td><td id="d1_4_18"></td><td id="d1_4_19"></td><td id="d1_4_20"></td>
+				<td id="d1_4_21"></td><td id="d1_4_22"></td><td id="d1_4_23"></td><td id="d1_4_24"></td><td id="d1_4_25"></td><td id="d1_4_26"></td><td id="d1_4_27"></td><td id="d1_4_28"></td><td id="d1_4_29"></td><td id="d1_4_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">May</td>
+				<td id="d1_5_1"></td><td id="d1_5_2"></td><td id="d1_5_3"></td><td id="d1_5_4"></td><td id="d1_5_5"></td><td id="d1_5_6"></td><td id="d1_5_7"></td><td id="d1_5_8"></td><td id="d1_5_9"></td><td id="d1_5_10"></td>
+				<td id="d1_5_11"></td><td id="d1_5_12"></td><td id="d1_5_13"></td><td id="d1_5_14"></td><td id="d1_5_15"></td><td id="d1_5_16"></td><td id="d1_5_17"></td><td id="d1_5_18"></td><td id="d1_5_19"></td><td id="d1_5_20"></td>
+				<td id="d1_5_21"></td><td id="d1_5_22"></td><td id="d1_5_23"></td><td id="d1_5_24"></td><td id="d1_5_25"></td><td id="d1_5_26"></td><td id="d1_5_27"></td><td id="d1_5_28"></td><td id="d1_5_29"></td><td id="d1_5_30"></td><td id="d1_5_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">June</td>
+				<td id="d1_6_1"></td><td id="d1_6_2"></td><td id="d1_6_3"></td><td id="d1_6_4"></td><td id="d1_6_5"></td><td id="d1_6_6"></td><td id="d1_6_7"></td><td id="d1_6_8"></td><td id="d1_6_9"></td><td id="d1_6_10"></td>
+				<td id="d1_6_11"></td><td id="d1_6_12"></td><td id="d1_6_13"></td><td id="d1_6_14"></td><td id="d1_6_15"></td><td id="d1_6_16"></td><td id="d1_6_17"></td><td id="d1_6_18"></td><td id="d1_6_19"></td><td id="d1_6_20"></td>
+				<td id="d1_6_21"></td><td id="d1_6_22"></td><td id="d1_6_23"></td><td id="d1_6_24"></td><td id="d1_6_25"></td><td id="d1_6_26"></td><td id="d1_6_27"></td><td id="d1_6_28"></td><td id="d1_6_29"></td><td id="d1_6_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">July</td>
+				<td id="d1_7_1"></td><td id="d1_7_2"></td><td id="d1_7_3"></td><td id="d1_7_4"></td><td id="d1_7_5"></td><td id="d1_7_6"></td><td id="d1_7_7"></td><td id="d1_7_8"></td><td id="d1_7_9"></td><td id="d1_7_10"></td>
+				<td id="d1_7_11"></td><td id="d1_7_12"></td><td id="d1_7_13"></td><td id="d1_7_14"></td><td id="d1_7_15"></td><td id="d1_7_16"></td><td id="d1_7_17"></td><td id="d1_7_18"></td><td id="d1_7_19"></td><td id="d1_7_20"></td>
+				<td id="d1_7_21"></td><td id="d1_7_22"></td><td id="d1_7_23"></td><td id="d1_7_24"></td><td id="d1_7_25"></td><td id="d1_7_26"></td><td id="d1_7_27"></td><td id="d1_7_28"></td><td id="d1_7_29"></td><td id="d1_7_30"></td><td id="d1_7_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">August</td>
+				<td id="d1_8_1"></td><td id="d1_8_2"></td><td id="d1_8_3"></td><td id="d1_8_4"></td><td id="d1_8_5"></td><td id="d1_8_6"></td><td id="d1_8_7"></td><td id="d1_8_8"></td><td id="d1_8_9"></td><td id="d1_8_10"></td>
+				<td id="d1_8_11"></td><td id="d1_8_12"></td><td id="d1_8_13"></td><td id="d1_8_14"></td><td id="d1_8_15"></td><td id="d1_8_16"></td><td id="d1_8_17"></td><td id="d1_8_18"></td><td id="d1_8_19"></td><td id="d1_8_20"></td>
+				<td id="d1_8_21"></td><td id="d1_8_22"></td><td id="d1_8_23"></td><td id="d1_8_24"></td><td id="d1_8_25"></td><td id="d1_8_26"></td><td id="d1_8_27"></td><td id="d1_8_28"></td><td id="d1_8_29"></td><td id="d1_8_30"></td><td id="d1_8_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">September</td>
+				<td id="d1_9_1"></td><td id="d1_9_2"></td><td id="d1_9_3"></td><td id="d1_9_4"></td><td id="d1_9_5"></td><td id="d1_9_6"></td><td id="d1_9_7"></td><td id="d1_9_8"></td><td id="d1_9_9"></td><td id="d1_9_10"></td>
+				<td id="d1_9_11"></td><td id="d1_9_12"></td><td id="d1_9_13"></td><td id="d1_9_14"></td><td id="d1_9_15"></td><td id="d1_9_16"></td><td id="d1_9_17"></td><td id="d1_9_18"></td><td id="d1_9_19"></td><td id="d1_9_20"></td>
+				<td id="d1_9_21"></td><td id="d1_9_22"></td><td id="d1_9_23"></td><td id="d1_9_24"></td><td id="d1_9_25"></td><td id="d1_9_26"></td><td id="d1_9_27"></td><td id="d1_9_28"></td><td id="d1_9_29"></td><td id="d1_9_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">October</td>
+				<td id="d1_10_1"></td><td id="d1_10_2"></td><td id="d1_10_3"></td><td id="d1_10_4"></td><td id="d1_10_5"></td><td id="d1_10_6"></td><td id="d1_10_7"></td><td id="d1_10_8"></td><td id="d1_10_9"></td><td id="d1_10_10"></td>
+				<td id="d1_10_11"></td><td id="d1_10_12"></td><td id="d1_10_13"></td><td id="d1_10_14"></td><td id="d1_10_15"></td><td id="d1_10_16"></td><td id="d1_10_17"></td><td id="d1_10_18"></td><td id="d1_10_19"></td><td id="d1_10_20"></td>
+				<td id="d1_10_21"></td><td id="d1_10_22"></td><td id="d1_10_23"></td><td id="d1_10_24"></td><td id="d1_10_25"></td><td id="d1_10_26"></td><td id="d1_10_27"></td><td id="d1_10_28"></td><td id="d1_10_29"></td><td id="d1_10_30"></td><td id="d1_10_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">November</td>
+				<td id="d1_11_1"></td><td id="d1_11_2"></td><td id="d1_11_3"></td><td id="d1_11_4"></td><td id="d1_11_5"></td><td id="d1_11_6"></td><td id="d1_11_7"></td><td id="d1_11_8"></td><td id="d1_11_9"></td><td id="d1_11_10"></td>
+				<td id="d1_11_11"></td><td id="d1_11_12"></td><td id="d1_11_13"></td><td id="d1_11_14"></td><td id="d1_11_15"></td><td id="d1_11_16"></td><td id="d1_11_17"></td><td id="d1_11_18"></td><td id="d1_11_19"></td><td id="d1_11_20"></td>
+				<td id="d1_11_21"></td><td id="d1_11_22"></td><td id="d1_11_23"></td><td id="d1_11_24"></td><td id="d1_11_25"></td><td id="d1_11_26"></td><td id="d1_11_27"></td><td id="d1_11_28"></td><td id="d1_11_29"></td><td id="d1_11_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">December</td>
+				<td id="d1_12_1"></td><td id="d1_12_2"></td><td id="d1_12_3"></td><td id="d1_12_4"></td><td id="d1_12_5"></td><td id="d1_12_6"></td><td id="d1_12_7"></td><td id="d1_12_8"></td><td id="d1_12_9"></td><td id="d1_12_10"></td>
+				<td id="d1_12_11"></td><td id="d1_12_12"></td><td id="d1_12_13"></td><td id="d1_12_14"></td><td id="d1_12_15"></td><td id="d1_12_16"></td><td id="d1_12_17"></td><td id="d1_12_18"></td><td id="d1_12_19"></td><td id="d1_12_20"></td>
+				<td id="d1_12_21"></td><td id="d1_12_22"></td><td id="d1_12_23"></td><td id="d1_12_24"></td><td id="d1_12_25"></td><td id="d1_12_26"></td><td id="d1_12_27"></td><td id="d1_12_28"></td><td id="d1_12_29"></td><td id="d1_12_30"></td><td id="d1_12_31"></td>
+			</tr>
+			<tr class="wcal_daysBar">
+				<td colspan="2"></td>
+				<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+				<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+				<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+			</tr>
+			<!--			-->
+			<tr>
+				<td rowspan="12" class="wcal_year" id="wcal_yrLabel2"></td><td class="wcal_month">January</td>
+				<td id="d2_1_1"></td><td id="d2_1_2"></td><td id="d2_1_3"></td><td id="d2_1_4"></td><td id="d2_1_5"></td><td id="d2_1_6"></td><td id="d2_1_7"></td><td id="d2_1_8"></td><td id="d2_1_9"></td><td id="d2_1_10"></td>
+				<td id="d2_1_11"></td><td id="d2_1_12"></td><td id="d2_1_13"></td><td id="d2_1_14"></td><td id="d2_1_15"></td><td id="d2_1_16"></td><td id="d2_1_17"></td><td id="d2_1_18"></td><td id="d2_1_19"></td><td id="d2_1_20"></td>
+				<td id="d2_1_21"></td><td id="d2_1_22"></td><td id="d2_1_23"></td><td id="d2_1_24"></td><td id="d2_1_25"></td><td id="d2_1_26"></td><td id="d2_1_27"></td><td id="d2_1_28"></td><td id="d2_1_29"></td><td id="d2_1_30"></td><td id="d2_1_31"></td>
+			
+			</tr>
+			<tr>
+				<td class="wcal_month">February</td>
+				<td id="d2_2_1"></td><td id="d2_2_2"></td><td id="d2_2_3"></td><td id="d2_2_4"></td><td id="d2_2_5"></td><td id="d2_2_6"></td><td id="d2_2_7"></td><td id="d2_2_8"></td><td id="d2_2_9"></td><td id="d2_2_10"></td>
+				<td id="d2_2_11"></td><td id="d2_2_12"></td><td id="d2_2_13"></td><td id="d2_2_14"></td><td id="d2_2_15"></td><td id="d2_2_16"></td><td id="d2_2_17"></td><td id="d2_2_18"></td><td id="d2_2_19"></td><td id="d2_2_20"></td>
+				<td id="d2_2_21"></td><td id="d2_2_22"></td><td id="d2_2_23"></td><td id="d2_2_24"></td><td id="d2_2_25"></td><td id="d2_2_26"></td><td id="d2_2_27"></td><td id="d2_2_28"></td><td id="d2_2_29" class="wcal_blank"></td><td class="wcal_blank"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">March</td>
+				<td id="d2_3_1"></td><td id="d2_3_2"></td><td id="d2_3_3"></td><td id="d2_3_4"></td><td id="d2_3_5"></td><td id="d2_3_6"></td><td id="d2_3_7"></td><td id="d2_3_8"></td><td id="d2_3_9"></td><td id="d2_3_10"></td>
+				<td id="d2_3_11"></td><td id="d2_3_12"></td><td id="d2_3_13"></td><td id="d2_3_14"></td><td id="d2_3_15"></td><td id="d2_3_16"></td><td id="d2_3_17"></td><td id="d2_3_18"></td><td id="d2_3_19"></td><td id="d2_3_20"></td>
+				<td id="d2_3_21"></td><td id="d2_3_22"></td><td id="d2_3_23"></td><td id="d2_3_24"></td><td id="d2_3_25"></td><td id="d2_3_26"></td><td id="d2_3_27"></td><td id="d2_3_28"></td><td id="d2_3_29"></td><td id="d2_3_30"></td><td id="d2_3_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">April</td>
+				<td id="d2_4_1"></td><td id="d2_4_2"></td><td id="d2_4_3"></td><td id="d2_4_4"></td><td id="d2_4_5"></td><td id="d2_4_6"></td><td id="d2_4_7"></td><td id="d2_4_8"></td><td id="d2_4_9"></td><td id="d2_4_10"></td>
+				<td id="d2_4_11"></td><td id="d2_4_12"></td><td id="d2_4_13"></td><td id="d2_4_14"></td><td id="d2_4_15"></td><td id="d2_4_16"></td><td id="d2_4_17"></td><td id="d2_4_18"></td><td id="d2_4_19"></td><td id="d2_4_20"></td>
+				<td id="d2_4_21"></td><td id="d2_4_22"></td><td id="d2_4_23"></td><td id="d2_4_24"></td><td id="d2_4_25"></td><td id="d2_4_26"></td><td id="d2_4_27"></td><td id="d2_4_28"></td><td id="d2_4_29"></td><td id="d2_4_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">May</td>
+				<td id="d2_5_1"></td><td id="d2_5_2"></td><td id="d2_5_3"></td><td id="d2_5_4"></td><td id="d2_5_5"></td><td id="d2_5_6"></td><td id="d2_5_7"></td><td id="d2_5_8"></td><td id="d2_5_9"></td><td id="d2_5_10"></td>
+				<td id="d2_5_11"></td><td id="d2_5_12"></td><td id="d2_5_13"></td><td id="d2_5_14"></td><td id="d2_5_15"></td><td id="d2_5_16"></td><td id="d2_5_17"></td><td id="d2_5_18"></td><td id="d2_5_19"></td><td id="d2_5_20"></td>
+				<td id="d2_5_21"></td><td id="d2_5_22"></td><td id="d2_5_23"></td><td id="d2_5_24"></td><td id="d2_5_25"></td><td id="d2_5_26"></td><td id="d2_5_27"></td><td id="d2_5_28"></td><td id="d2_5_29"></td><td id="d2_5_30"></td><td id="d2_5_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">June</td>
+				<td id="d2_6_1"></td><td id="d2_6_2"></td><td id="d2_6_3"></td><td id="d2_6_4"></td><td id="d2_6_5"></td><td id="d2_6_6"></td><td id="d2_6_7"></td><td id="d2_6_8"></td><td id="d2_6_9"></td><td id="d2_6_10"></td>
+				<td id="d2_6_11"></td><td id="d2_6_12"></td><td id="d2_6_13"></td><td id="d2_6_14"></td><td id="d2_6_15"></td><td id="d2_6_16"></td><td id="d2_6_17"></td><td id="d2_6_18"></td><td id="d2_6_19"></td><td id="d2_6_20"></td>
+				<td id="d2_6_21"></td><td id="d2_6_22"></td><td id="d2_6_23"></td><td id="d2_6_24"></td><td id="d2_6_25"></td><td id="d2_6_26"></td><td id="d2_6_27"></td><td id="d2_6_28"></td><td id="d2_6_29"></td><td id="d2_6_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">July</td>
+				<td id="d2_7_1"></td><td id="d2_7_2"></td><td id="d2_7_3"></td><td id="d2_7_4"></td><td id="d2_7_5"></td><td id="d2_7_6"></td><td id="d2_7_7"></td><td id="d2_7_8"></td><td id="d2_7_9"></td><td id="d2_7_10"></td>
+				<td id="d2_7_11"></td><td id="d2_7_12"></td><td id="d2_7_13"></td><td id="d2_7_14"></td><td id="d2_7_15"></td><td id="d2_7_16"></td><td id="d2_7_17"></td><td id="d2_7_18"></td><td id="d2_7_19"></td><td id="d2_7_20"></td>
+				<td id="d2_7_21"></td><td id="d2_7_22"></td><td id="d2_7_23"></td><td id="d2_7_24"></td><td id="d2_7_25"></td><td id="d2_7_26"></td><td id="d2_7_27"></td><td id="d2_7_28"></td><td id="d2_7_29"></td><td id="d2_7_30"></td><td id="d2_7_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">August</td>
+				<td id="d2_8_1"></td><td id="d2_8_2"></td><td id="d2_8_3"></td><td id="d2_8_4"></td><td id="d2_8_5"></td><td id="d2_8_6"></td><td id="d2_8_7"></td><td id="d2_8_8"></td><td id="d2_8_9"></td><td id="d2_8_10"></td>
+				<td id="d2_8_11"></td><td id="d2_8_12"></td><td id="d2_8_13"></td><td id="d2_8_14"></td><td id="d2_8_15"></td><td id="d2_8_16"></td><td id="d2_8_17"></td><td id="d2_8_18"></td><td id="d2_8_19"></td><td id="d2_8_20"></td>
+				<td id="d2_8_21"></td><td id="d2_8_22"></td><td id="d2_8_23"></td><td id="d2_8_24"></td><td id="d2_8_25"></td><td id="d2_8_26"></td><td id="d2_8_27"></td><td id="d2_8_28"></td><td id="d2_8_29"></td><td id="d2_8_30"></td><td id="d2_8_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">September</td>
+				<td id="d2_9_1"></td><td id="d2_9_2"></td><td id="d2_9_3"></td><td id="d2_9_4"></td><td id="d2_9_5"></td><td id="d2_9_6"></td><td id="d2_9_7"></td><td id="d2_9_8"></td><td id="d2_9_9"></td><td id="d2_9_10"></td>
+				<td id="d2_9_11"></td><td id="d2_9_12"></td><td id="d2_9_13"></td><td id="d2_9_14"></td><td id="d2_9_15"></td><td id="d2_9_16"></td><td id="d2_9_17"></td><td id="d2_9_18"></td><td id="d2_9_19"></td><td id="d2_9_20"></td>
+				<td id="d2_9_21"></td><td id="d2_9_22"></td><td id="d2_9_23"></td><td id="d2_9_24"></td><td id="d2_9_25"></td><td id="d2_9_26"></td><td id="d2_9_27"></td><td id="d2_9_28"></td><td id="d2_9_29"></td><td id="d2_9_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">October</td>
+				<td id="d2_10_1"></td><td id="d2_10_2"></td><td id="d2_10_3"></td><td id="d2_10_4"></td><td id="d2_10_5"></td><td id="d2_10_6"></td><td id="d2_10_7"></td><td id="d2_10_8"></td><td id="d2_10_9"></td><td id="d2_10_10"></td>
+				<td id="d2_10_11"></td><td id="d2_10_12"></td><td id="d2_10_13"></td><td id="d2_10_14"></td><td id="d2_10_15"></td><td id="d2_10_16"></td><td id="d2_10_17"></td><td id="d2_10_18"></td><td id="d2_10_19"></td><td id="d2_10_20"></td>
+				<td id="d2_10_21"></td><td id="d2_10_22"></td><td id="d2_10_23"></td><td id="d2_10_24"></td><td id="d2_10_25"></td><td id="d2_10_26"></td><td id="d2_10_27"></td><td id="d2_10_28"></td><td id="d2_10_29"></td><td id="d2_10_30"></td><td id="d2_10_31"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">November</td>
+				<td id="d2_11_1"></td><td id="d2_11_2"></td><td id="d2_11_3"></td><td id="d2_11_4"></td><td id="d2_11_5"></td><td id="d2_11_6"></td><td id="d2_11_7"></td><td id="d2_11_8"></td><td id="d2_11_9"></td><td id="d2_11_10"></td>
+				<td id="d2_11_11"></td><td id="d2_11_12"></td><td id="d2_11_13"></td><td id="d2_11_14"></td><td id="d2_11_15"></td><td id="d2_11_16"></td><td id="d2_11_17"></td><td id="d2_11_18"></td><td id="d2_11_19"></td><td id="d2_11_20"></td>
+				<td id="d2_11_21"></td><td id="d2_11_22"></td><td id="d2_11_23"></td><td id="d2_11_24"></td><td id="d2_11_25"></td><td id="d2_11_26"></td><td id="d2_11_27"></td><td id="d2_11_28"></td><td id="d2_11_29"></td><td id="d2_11_30"></td><td class="wcal_blank"></td>
+			</tr>
+			<tr>
+				<td class="wcal_month">December</td>
+				<td id="d2_12_1"></td><td id="d2_12_2"></td><td id="d2_12_3"></td><td id="d2_12_4"></td><td id="d2_12_5"></td><td id="d2_12_6"></td><td id="d2_12_7"></td><td id="d2_12_8"></td><td id="d2_12_9"></td><td id="d2_12_10"></td>
+				<td id="d2_12_11"></td><td id="d2_12_12"></td><td id="d2_12_13"></td><td id="d2_12_14"></td><td id="d2_12_15"></td><td id="d2_12_16"></td><td id="d2_12_17"></td><td id="d2_12_18"></td><td id="d2_12_19"></td><td id="d2_12_20"></td>
+				<td id="d2_12_21"></td><td id="d2_12_22"></td><td id="d2_12_23"></td><td id="d2_12_24"></td><td id="d2_12_25"></td><td id="d2_12_26"></td><td id="d2_12_27"></td><td id="d2_12_28"></td><td id="d2_12_29"></td><td id="d2_12_30"></td><td id="d2_12_31"></td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr class="wcal_daysBar">
+				<td colspan="2"></td>
+				<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+				<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+				<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+			</tr>
+		</tfoot>
+	</table>
+</div>
+
+<div id="wcal_schedContainer">
+	<img alt="" class="wcal_calHeadShading" src="" />
+	<table id="wcal_sched">
+		<tr>
+			<td rowspan="2"><span>Assigned<br />Holidays</span></td>
+				<td><span id="wcal_yrLabela1"></span></td>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+		<tr>
+				<td><span id="wcal_yrLabela2"></span></td>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+</div>
+
+	<table id="wcal_holidays">
+		<thead>
+			<tr>
+				<th colspan="5" class="wcal_title">Utah's State-Recognized Holidays</th>
+			</tr>
+			<tr>
+				<th colspan="2" id="wcal_yrLabels1"></th>
+				<th> </th>
+				<th colspan="2" id="wcal_yrLabels2"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<!-- Inserted by javascript -->
+		</tbody>
+	</table>
+</section>
+
+<footer>
+	<p>
+		For issues concerning this calendar, contact 
+		<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">Brent Starks</a> at 
+		<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">grumpily@gmail.com</a>.
+	</p>
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "udc_calendar",
+  "version": "0.1.0",
+  "description": "A calendar showing the UDC 28 day X & O Squad work cycle.",
+  "main": "buildfiles.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brent Starks",
+  "window": {
+    "toolbar": true,
+    "frame": true,
+    "position": "center",
+    "width": 1000,
+    "height": 700,
+    "min_width": 400,
+    "min_height": 200,
+    "max_width": 1200,
+    "max_height": 800
+  },
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^0.18.4",
+    "jsonfile": "^2.2.1",
+    "node-find-files": "^0.0.4"
+  },
+  "devDependencies": {
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-creplace": "^0.1.4",
+    "grunt-contrib-csslint": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-handlebars": "^1.0.0",
+    "grunt-contrib-htmlmin": "^1.4.0",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-qunit": "^1.2.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-diff-copy": "^0.1.4",
+    "grunt-filessrc": "^0.3.0",
+    "grunt-legal-eagle": "^0.3.0",
+    "grunt-string-replace": "^1.2.1"
+  }
+}

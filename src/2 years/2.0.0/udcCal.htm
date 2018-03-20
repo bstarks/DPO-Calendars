@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Brent Starks, bstarks(AT)utah.gov" />
+	<meta name="author" content="Brent Starks, grumpily(AT)gmail.com" />
+	
+	<title>CUCF X/O Squad Work Calendar (2 Yr.)</title>
+
+	<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+	<link type="text/css" rel="Stylesheet" href="udcCal.css" />
+	<script type="text/javascript" src="udcCal.js"></script>
+
+</head>
+
+
+<body>
+
+<!-- BEGIN: WEB CALENDAR -->
+<div id="wcal_calendar">
+	
+	<!-- This is NOT displayed. It makes script access to images possible. -->
+	<div id="wcal_secret" style="display:none;">
+		<span id="wcal_sec_imgXDays" class="wcal_imgXDays wcal_hiddenImg">&nbsp;</span>
+		<span id="wcal_sec_imgODays" class="wcal_imgODays wcal_hiddenImg">&nbsp;</span>
+		<span id="wcal_sec_imgBlank" class="wcal_imgBlank wcal_hiddenImg">&nbsp;</span>
+		<span id="wcal_sec_imgClear" class="wcal_imgClear wcal_hiddenImg">&nbsp;</span>
+	</div>
+	
+	<div id="wcal_toolbar" class="wcal_header">
+		<button onclick="id0.wcal.tb.print()" class="wcal_btns wcal_btnImgPrint" title="Click here to print the calendar without the artifacts created by using other buttons (best in Chrome).">
+			Print
+		</button>
+		&nbsp;|&nbsp; 
+		<input id="wcal_input" type="text" onchange="id0.wcal.tb.gotoCal(this.value)" onclick="this.select()" title="Enter the desired year then click the button on the right to pull up that year's calendar." /><!--
+		--><button onclick="id0.wcal.tb.gotoCal($('#wcal_input').attr('value'))" class="wcal_btns wcal_btnImgGoToYr" title="Enter the desired year on the right then click this button to pull up that year's calendar.">
+			Go To Year
+		</button>
+		&nbsp;|&nbsp;
+		<button onclick="id0.wcal.tb.previous()" class="wcal_btns wcal_btnImgPrevious" title="Go to previous year's calendars stepping two years at a time.">
+			Previous
+		</button>
+		<button onclick="id0.wcal.tb.now()" class="wcal_btns wcal_btnImgCurrent" title="Get the current year's calendar.">
+			Current
+		</button>
+		<button onclick="id0.wcal.tb.next()" class="wcal_btns wcal_btnImgNext" title="Go to future year's calendars stepping two years at a time.">
+			Next
+		</button>
+		&nbsp;|&nbsp;
+		<button id="wcal_dd" class="wcal_btns wcal_btnImgShow wcal_wrapper-dropdown-4">
+			View <span></span><!-- span is temporarily required for the dropdown to work -->
+			<ul class="wcal_dropdown">
+				<li><input type="checkbox" id="wcal_view1" name="wcal_view" class="wcal_view" value="wcal_table">	<label for="wcal_view1">Calendars</label></li>
+				<li><input type="checkbox" id="wcal_view2" name="wcal_view" class="wcal_view" value="wcal_holidays"><label for="wcal_view2">Holiday Lists</label></li>
+				<li><input type="checkbox" id="wcal_view3" name="wcal_view" class="wcal_view" value="wcal_sched">	<label for="wcal_view3">Assigned Holidays</label></li>
+			</ul>
+		</button>
+		&nbsp;|&nbsp;
+		<button onclick="id0.wcal.tb.help('2yrCal')" class="wcal_btns wcal_btnImgHelp">
+			Help
+		</button>
+
+		<div id="wcal_helpBox" class="wcal_hide">
+			<p><strong>Print</strong> - Click to open the print dialogue.</p>
+			<p><strong>Go To Year</strong> - Enter the desired year in the text box in front of the <strong>Go To Year</strong> button and then click on the <strong>Go To Year</strong> button to start the calendar on the desired year.</p>
+			<p><strong>Previous</strong> - Click to start the calendar two years before the year currently shown on the calendar. Each click steps two more years into the past.</p>
+			<p><strong>Current</strong> - Click to restore the displayed caledar to the current year.</p>
+			<p><strong>Next</strong> - Click to start the calendar two years farther into the future than the year currently shown on the calendar. Each click steps two more years into the future.</p>
+			<p><strong>View</strong> - Click to select which items to display with the calendar.</p>
+			<p><strong>Help</strong> - Click to see or hide this help dialogue.</p>
+			<hr />
+			<p>This calendar was created by <a href="mailto:grumpily@gmail.com?subject=Work Calendar">Brent Starks</a> at <a href="mailto:grumpily@gmail.com?subject=Work Calendar">grumpily@gmail.com</a>. This is the person to contact regarding any issues or feature requests with this calendar. Please include the name and email address of the maintainer of the web page containing this calendar.</p>
+			<p>Web page maintainers may find other more compatible versions of the calendar (and other resources) at <a href="http://id0.org/cucf/">http://id0.org/cucf/</a>.</p>
+		</div>
+
+	</div>
+
+
+	<div id="wcal_printArea">
+		<div id="wcal_container">
+			<table id="wcal_table" class="wcal_tables">
+				<thead>
+					<tr>
+						<td colspan="33" class="wcal_legendCell">
+							<h1 id="wcal_title"></h1>
+
+							<span class="wcal_headLeft">X-Squad Works</span>
+							<span class="wcal_headCenter">Paydays</span>
+							<span class="wcal_headRight">O-Squad Works</span>
+							<br />
+
+							<div class="wcal_headLeft">
+								<div class="wcal_xo wcal_x">
+									<div><img alt="" src="" /></div>
+								</div>
+							</div>
+							<div class="wcal_headCenter">
+								<div class="wcal_xo wcal_o">
+									<div><img alt="" src="" /></div>
+									<div>F$</div>
+								</div>
+								&nbsp;or&nbsp;
+								<div class="wcal_xo wcal_x">
+									<div><img alt="" src="" /></div>
+									<div>F$</div>
+								</div>
+							</div>
+							<div class="wcal_headRight">
+								<div class="wcal_xo wcal_o">
+									<div><img alt="" src="" /></div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</thead>
+				<tbody id="wcal_body">
+					<tr class="wcal_daysBar">
+						<td colspan="2"></td>
+						<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+						<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+						<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+					</tr>
+					<!--			-->
+					<tr>
+						<td rowspan="12" class="wcal_year" id="wcal_yrLabel1"></td><td class="wcal_month">January</td>
+						<td id="d1_1_1"></td><td id="d1_1_2"></td><td id="d1_1_3"></td><td id="d1_1_4"></td><td id="d1_1_5"></td><td id="d1_1_6"></td><td id="d1_1_7"></td><td id="d1_1_8"></td><td id="d1_1_9"></td><td id="d1_1_10"></td>
+						<td id="d1_1_11"></td><td id="d1_1_12"></td><td id="d1_1_13"></td><td id="d1_1_14"></td><td id="d1_1_15"></td><td id="d1_1_16"></td><td id="d1_1_17"></td><td id="d1_1_18"></td><td id="d1_1_19"></td><td id="d1_1_20"></td>
+						<td id="d1_1_21"></td><td id="d1_1_22"></td><td id="d1_1_23"></td><td id="d1_1_24"></td><td id="d1_1_25"></td><td id="d1_1_26"></td><td id="d1_1_27"></td><td id="d1_1_28"></td><td id="d1_1_29"></td><td id="d1_1_30"></td><td id="d1_1_31"></td>
+			
+					</tr>
+					<tr>
+						<td class="wcal_month">February</td>
+						<td id="d1_2_1"></td><td id="d1_2_2"></td><td id="d1_2_3"></td><td id="d1_2_4"></td><td id="d1_2_5"></td><td id="d1_2_6"></td><td id="d1_2_7"></td><td id="d1_2_8"></td><td id="d1_2_9"></td><td id="d1_2_10"></td>
+						<td id="d1_2_11"></td><td id="d1_2_12"></td><td id="d1_2_13"></td><td id="d1_2_14"></td><td id="d1_2_15"></td><td id="d1_2_16"></td><td id="d1_2_17"></td><td id="d1_2_18"></td><td id="d1_2_19"></td><td id="d1_2_20"></td>
+						<td id="d1_2_21"></td><td id="d1_2_22"></td><td id="d1_2_23"></td><td id="d1_2_24"></td><td id="d1_2_25"></td><td id="d1_2_26"></td><td id="d1_2_27"></td><td id="d1_2_28"></td><td id="d1_2_29" class="wcal_blank"></td><td class="wcal_blank"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">March</td>
+						<td id="d1_3_1"></td><td id="d1_3_2"></td><td id="d1_3_3"></td><td id="d1_3_4"></td><td id="d1_3_5"></td><td id="d1_3_6"></td><td id="d1_3_7"></td><td id="d1_3_8"></td><td id="d1_3_9"></td><td id="d1_3_10"></td>
+						<td id="d1_3_11"></td><td id="d1_3_12"></td><td id="d1_3_13"></td><td id="d1_3_14"></td><td id="d1_3_15"></td><td id="d1_3_16"></td><td id="d1_3_17"></td><td id="d1_3_18"></td><td id="d1_3_19"></td><td id="d1_3_20"></td>
+						<td id="d1_3_21"></td><td id="d1_3_22"></td><td id="d1_3_23"></td><td id="d1_3_24"></td><td id="d1_3_25"></td><td id="d1_3_26"></td><td id="d1_3_27"></td><td id="d1_3_28"></td><td id="d1_3_29"></td><td id="d1_3_30"></td><td id="d1_3_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">April</td>
+						<td id="d1_4_1"></td><td id="d1_4_2"></td><td id="d1_4_3"></td><td id="d1_4_4"></td><td id="d1_4_5"></td><td id="d1_4_6"></td><td id="d1_4_7"></td><td id="d1_4_8"></td><td id="d1_4_9"></td><td id="d1_4_10"></td>
+						<td id="d1_4_11"></td><td id="d1_4_12"></td><td id="d1_4_13"></td><td id="d1_4_14"></td><td id="d1_4_15"></td><td id="d1_4_16"></td><td id="d1_4_17"></td><td id="d1_4_18"></td><td id="d1_4_19"></td><td id="d1_4_20"></td>
+						<td id="d1_4_21"></td><td id="d1_4_22"></td><td id="d1_4_23"></td><td id="d1_4_24"></td><td id="d1_4_25"></td><td id="d1_4_26"></td><td id="d1_4_27"></td><td id="d1_4_28"></td><td id="d1_4_29"></td><td id="d1_4_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">May</td>
+						<td id="d1_5_1"></td><td id="d1_5_2"></td><td id="d1_5_3"></td><td id="d1_5_4"></td><td id="d1_5_5"></td><td id="d1_5_6"></td><td id="d1_5_7"></td><td id="d1_5_8"></td><td id="d1_5_9"></td><td id="d1_5_10"></td>
+						<td id="d1_5_11"></td><td id="d1_5_12"></td><td id="d1_5_13"></td><td id="d1_5_14"></td><td id="d1_5_15"></td><td id="d1_5_16"></td><td id="d1_5_17"></td><td id="d1_5_18"></td><td id="d1_5_19"></td><td id="d1_5_20"></td>
+						<td id="d1_5_21"></td><td id="d1_5_22"></td><td id="d1_5_23"></td><td id="d1_5_24"></td><td id="d1_5_25"></td><td id="d1_5_26"></td><td id="d1_5_27"></td><td id="d1_5_28"></td><td id="d1_5_29"></td><td id="d1_5_30"></td><td id="d1_5_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">June</td>
+						<td id="d1_6_1"></td><td id="d1_6_2"></td><td id="d1_6_3"></td><td id="d1_6_4"></td><td id="d1_6_5"></td><td id="d1_6_6"></td><td id="d1_6_7"></td><td id="d1_6_8"></td><td id="d1_6_9"></td><td id="d1_6_10"></td>
+						<td id="d1_6_11"></td><td id="d1_6_12"></td><td id="d1_6_13"></td><td id="d1_6_14"></td><td id="d1_6_15"></td><td id="d1_6_16"></td><td id="d1_6_17"></td><td id="d1_6_18"></td><td id="d1_6_19"></td><td id="d1_6_20"></td>
+						<td id="d1_6_21"></td><td id="d1_6_22"></td><td id="d1_6_23"></td><td id="d1_6_24"></td><td id="d1_6_25"></td><td id="d1_6_26"></td><td id="d1_6_27"></td><td id="d1_6_28"></td><td id="d1_6_29"></td><td id="d1_6_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">July</td>
+						<td id="d1_7_1"></td><td id="d1_7_2"></td><td id="d1_7_3"></td><td id="d1_7_4"></td><td id="d1_7_5"></td><td id="d1_7_6"></td><td id="d1_7_7"></td><td id="d1_7_8"></td><td id="d1_7_9"></td><td id="d1_7_10"></td>
+						<td id="d1_7_11"></td><td id="d1_7_12"></td><td id="d1_7_13"></td><td id="d1_7_14"></td><td id="d1_7_15"></td><td id="d1_7_16"></td><td id="d1_7_17"></td><td id="d1_7_18"></td><td id="d1_7_19"></td><td id="d1_7_20"></td>
+						<td id="d1_7_21"></td><td id="d1_7_22"></td><td id="d1_7_23"></td><td id="d1_7_24"></td><td id="d1_7_25"></td><td id="d1_7_26"></td><td id="d1_7_27"></td><td id="d1_7_28"></td><td id="d1_7_29"></td><td id="d1_7_30"></td><td id="d1_7_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">August</td>
+						<td id="d1_8_1"></td><td id="d1_8_2"></td><td id="d1_8_3"></td><td id="d1_8_4"></td><td id="d1_8_5"></td><td id="d1_8_6"></td><td id="d1_8_7"></td><td id="d1_8_8"></td><td id="d1_8_9"></td><td id="d1_8_10"></td>
+						<td id="d1_8_11"></td><td id="d1_8_12"></td><td id="d1_8_13"></td><td id="d1_8_14"></td><td id="d1_8_15"></td><td id="d1_8_16"></td><td id="d1_8_17"></td><td id="d1_8_18"></td><td id="d1_8_19"></td><td id="d1_8_20"></td>
+						<td id="d1_8_21"></td><td id="d1_8_22"></td><td id="d1_8_23"></td><td id="d1_8_24"></td><td id="d1_8_25"></td><td id="d1_8_26"></td><td id="d1_8_27"></td><td id="d1_8_28"></td><td id="d1_8_29"></td><td id="d1_8_30"></td><td id="d1_8_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">September</td>
+						<td id="d1_9_1"></td><td id="d1_9_2"></td><td id="d1_9_3"></td><td id="d1_9_4"></td><td id="d1_9_5"></td><td id="d1_9_6"></td><td id="d1_9_7"></td><td id="d1_9_8"></td><td id="d1_9_9"></td><td id="d1_9_10"></td>
+						<td id="d1_9_11"></td><td id="d1_9_12"></td><td id="d1_9_13"></td><td id="d1_9_14"></td><td id="d1_9_15"></td><td id="d1_9_16"></td><td id="d1_9_17"></td><td id="d1_9_18"></td><td id="d1_9_19"></td><td id="d1_9_20"></td>
+						<td id="d1_9_21"></td><td id="d1_9_22"></td><td id="d1_9_23"></td><td id="d1_9_24"></td><td id="d1_9_25"></td><td id="d1_9_26"></td><td id="d1_9_27"></td><td id="d1_9_28"></td><td id="d1_9_29"></td><td id="d1_9_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">October</td>
+						<td id="d1_10_1"></td><td id="d1_10_2"></td><td id="d1_10_3"></td><td id="d1_10_4"></td><td id="d1_10_5"></td><td id="d1_10_6"></td><td id="d1_10_7"></td><td id="d1_10_8"></td><td id="d1_10_9"></td><td id="d1_10_10"></td>
+						<td id="d1_10_11"></td><td id="d1_10_12"></td><td id="d1_10_13"></td><td id="d1_10_14"></td><td id="d1_10_15"></td><td id="d1_10_16"></td><td id="d1_10_17"></td><td id="d1_10_18"></td><td id="d1_10_19"></td><td id="d1_10_20"></td>
+						<td id="d1_10_21"></td><td id="d1_10_22"></td><td id="d1_10_23"></td><td id="d1_10_24"></td><td id="d1_10_25"></td><td id="d1_10_26"></td><td id="d1_10_27"></td><td id="d1_10_28"></td><td id="d1_10_29"></td><td id="d1_10_30"></td><td id="d1_10_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">November</td>
+						<td id="d1_11_1"></td><td id="d1_11_2"></td><td id="d1_11_3"></td><td id="d1_11_4"></td><td id="d1_11_5"></td><td id="d1_11_6"></td><td id="d1_11_7"></td><td id="d1_11_8"></td><td id="d1_11_9"></td><td id="d1_11_10"></td>
+						<td id="d1_11_11"></td><td id="d1_11_12"></td><td id="d1_11_13"></td><td id="d1_11_14"></td><td id="d1_11_15"></td><td id="d1_11_16"></td><td id="d1_11_17"></td><td id="d1_11_18"></td><td id="d1_11_19"></td><td id="d1_11_20"></td>
+						<td id="d1_11_21"></td><td id="d1_11_22"></td><td id="d1_11_23"></td><td id="d1_11_24"></td><td id="d1_11_25"></td><td id="d1_11_26"></td><td id="d1_11_27"></td><td id="d1_11_28"></td><td id="d1_11_29"></td><td id="d1_11_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">December</td>
+						<td id="d1_12_1"></td><td id="d1_12_2"></td><td id="d1_12_3"></td><td id="d1_12_4"></td><td id="d1_12_5"></td><td id="d1_12_6"></td><td id="d1_12_7"></td><td id="d1_12_8"></td><td id="d1_12_9"></td><td id="d1_12_10"></td>
+						<td id="d1_12_11"></td><td id="d1_12_12"></td><td id="d1_12_13"></td><td id="d1_12_14"></td><td id="d1_12_15"></td><td id="d1_12_16"></td><td id="d1_12_17"></td><td id="d1_12_18"></td><td id="d1_12_19"></td><td id="d1_12_20"></td>
+						<td id="d1_12_21"></td><td id="d1_12_22"></td><td id="d1_12_23"></td><td id="d1_12_24"></td><td id="d1_12_25"></td><td id="d1_12_26"></td><td id="d1_12_27"></td><td id="d1_12_28"></td><td id="d1_12_29"></td><td id="d1_12_30"></td><td id="d1_12_31"></td>
+					</tr>
+					<tr class="wcal_daysBar">
+						<td colspan="2"></td>
+						<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+						<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+						<td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+					</tr>
+					<!--			-->
+					<tr>
+						<td rowspan="12" class="wcal_year" id="wcal_yrLabel2"></td><td class="wcal_month">January</td>
+						<td id="d2_1_1"></td><td id="d2_1_2"></td><td id="d2_1_3"></td><td id="d2_1_4"></td><td id="d2_1_5"></td><td id="d2_1_6"></td><td id="d2_1_7"></td><td id="d2_1_8"></td><td id="d2_1_9"></td><td id="d2_1_10"></td>
+						<td id="d2_1_11"></td><td id="d2_1_12"></td><td id="d2_1_13"></td><td id="d2_1_14"></td><td id="d2_1_15"></td><td id="d2_1_16"></td><td id="d2_1_17"></td><td id="d2_1_18"></td><td id="d2_1_19"></td><td id="d2_1_20"></td>
+						<td id="d2_1_21"></td><td id="d2_1_22"></td><td id="d2_1_23"></td><td id="d2_1_24"></td><td id="d2_1_25"></td><td id="d2_1_26"></td><td id="d2_1_27"></td><td id="d2_1_28"></td><td id="d2_1_29"></td><td id="d2_1_30"></td><td id="d2_1_31"></td>
+			
+					</tr>
+					<tr>
+						<td class="wcal_month">February</td>
+						<td id="d2_2_1"></td><td id="d2_2_2"></td><td id="d2_2_3"></td><td id="d2_2_4"></td><td id="d2_2_5"></td><td id="d2_2_6"></td><td id="d2_2_7"></td><td id="d2_2_8"></td><td id="d2_2_9"></td><td id="d2_2_10"></td>
+						<td id="d2_2_11"></td><td id="d2_2_12"></td><td id="d2_2_13"></td><td id="d2_2_14"></td><td id="d2_2_15"></td><td id="d2_2_16"></td><td id="d2_2_17"></td><td id="d2_2_18"></td><td id="d2_2_19"></td><td id="d2_2_20"></td>
+						<td id="d2_2_21"></td><td id="d2_2_22"></td><td id="d2_2_23"></td><td id="d2_2_24"></td><td id="d2_2_25"></td><td id="d2_2_26"></td><td id="d2_2_27"></td><td id="d2_2_28"></td><td id="d2_2_29" class="wcal_blank"></td><td class="wcal_blank"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">March</td>
+						<td id="d2_3_1"></td><td id="d2_3_2"></td><td id="d2_3_3"></td><td id="d2_3_4"></td><td id="d2_3_5"></td><td id="d2_3_6"></td><td id="d2_3_7"></td><td id="d2_3_8"></td><td id="d2_3_9"></td><td id="d2_3_10"></td>
+						<td id="d2_3_11"></td><td id="d2_3_12"></td><td id="d2_3_13"></td><td id="d2_3_14"></td><td id="d2_3_15"></td><td id="d2_3_16"></td><td id="d2_3_17"></td><td id="d2_3_18"></td><td id="d2_3_19"></td><td id="d2_3_20"></td>
+						<td id="d2_3_21"></td><td id="d2_3_22"></td><td id="d2_3_23"></td><td id="d2_3_24"></td><td id="d2_3_25"></td><td id="d2_3_26"></td><td id="d2_3_27"></td><td id="d2_3_28"></td><td id="d2_3_29"></td><td id="d2_3_30"></td><td id="d2_3_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">April</td>
+						<td id="d2_4_1"></td><td id="d2_4_2"></td><td id="d2_4_3"></td><td id="d2_4_4"></td><td id="d2_4_5"></td><td id="d2_4_6"></td><td id="d2_4_7"></td><td id="d2_4_8"></td><td id="d2_4_9"></td><td id="d2_4_10"></td>
+						<td id="d2_4_11"></td><td id="d2_4_12"></td><td id="d2_4_13"></td><td id="d2_4_14"></td><td id="d2_4_15"></td><td id="d2_4_16"></td><td id="d2_4_17"></td><td id="d2_4_18"></td><td id="d2_4_19"></td><td id="d2_4_20"></td>
+						<td id="d2_4_21"></td><td id="d2_4_22"></td><td id="d2_4_23"></td><td id="d2_4_24"></td><td id="d2_4_25"></td><td id="d2_4_26"></td><td id="d2_4_27"></td><td id="d2_4_28"></td><td id="d2_4_29"></td><td id="d2_4_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">May</td>
+						<td id="d2_5_1"></td><td id="d2_5_2"></td><td id="d2_5_3"></td><td id="d2_5_4"></td><td id="d2_5_5"></td><td id="d2_5_6"></td><td id="d2_5_7"></td><td id="d2_5_8"></td><td id="d2_5_9"></td><td id="d2_5_10"></td>
+						<td id="d2_5_11"></td><td id="d2_5_12"></td><td id="d2_5_13"></td><td id="d2_5_14"></td><td id="d2_5_15"></td><td id="d2_5_16"></td><td id="d2_5_17"></td><td id="d2_5_18"></td><td id="d2_5_19"></td><td id="d2_5_20"></td>
+						<td id="d2_5_21"></td><td id="d2_5_22"></td><td id="d2_5_23"></td><td id="d2_5_24"></td><td id="d2_5_25"></td><td id="d2_5_26"></td><td id="d2_5_27"></td><td id="d2_5_28"></td><td id="d2_5_29"></td><td id="d2_5_30"></td><td id="d2_5_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">June</td>
+						<td id="d2_6_1"></td><td id="d2_6_2"></td><td id="d2_6_3"></td><td id="d2_6_4"></td><td id="d2_6_5"></td><td id="d2_6_6"></td><td id="d2_6_7"></td><td id="d2_6_8"></td><td id="d2_6_9"></td><td id="d2_6_10"></td>
+						<td id="d2_6_11"></td><td id="d2_6_12"></td><td id="d2_6_13"></td><td id="d2_6_14"></td><td id="d2_6_15"></td><td id="d2_6_16"></td><td id="d2_6_17"></td><td id="d2_6_18"></td><td id="d2_6_19"></td><td id="d2_6_20"></td>
+						<td id="d2_6_21"></td><td id="d2_6_22"></td><td id="d2_6_23"></td><td id="d2_6_24"></td><td id="d2_6_25"></td><td id="d2_6_26"></td><td id="d2_6_27"></td><td id="d2_6_28"></td><td id="d2_6_29"></td><td id="d2_6_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">July</td>
+						<td id="d2_7_1"></td><td id="d2_7_2"></td><td id="d2_7_3"></td><td id="d2_7_4"></td><td id="d2_7_5"></td><td id="d2_7_6"></td><td id="d2_7_7"></td><td id="d2_7_8"></td><td id="d2_7_9"></td><td id="d2_7_10"></td>
+						<td id="d2_7_11"></td><td id="d2_7_12"></td><td id="d2_7_13"></td><td id="d2_7_14"></td><td id="d2_7_15"></td><td id="d2_7_16"></td><td id="d2_7_17"></td><td id="d2_7_18"></td><td id="d2_7_19"></td><td id="d2_7_20"></td>
+						<td id="d2_7_21"></td><td id="d2_7_22"></td><td id="d2_7_23"></td><td id="d2_7_24"></td><td id="d2_7_25"></td><td id="d2_7_26"></td><td id="d2_7_27"></td><td id="d2_7_28"></td><td id="d2_7_29"></td><td id="d2_7_30"></td><td id="d2_7_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">August</td>
+						<td id="d2_8_1"></td><td id="d2_8_2"></td><td id="d2_8_3"></td><td id="d2_8_4"></td><td id="d2_8_5"></td><td id="d2_8_6"></td><td id="d2_8_7"></td><td id="d2_8_8"></td><td id="d2_8_9"></td><td id="d2_8_10"></td>
+						<td id="d2_8_11"></td><td id="d2_8_12"></td><td id="d2_8_13"></td><td id="d2_8_14"></td><td id="d2_8_15"></td><td id="d2_8_16"></td><td id="d2_8_17"></td><td id="d2_8_18"></td><td id="d2_8_19"></td><td id="d2_8_20"></td>
+						<td id="d2_8_21"></td><td id="d2_8_22"></td><td id="d2_8_23"></td><td id="d2_8_24"></td><td id="d2_8_25"></td><td id="d2_8_26"></td><td id="d2_8_27"></td><td id="d2_8_28"></td><td id="d2_8_29"></td><td id="d2_8_30"></td><td id="d2_8_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">September</td>
+						<td id="d2_9_1"></td><td id="d2_9_2"></td><td id="d2_9_3"></td><td id="d2_9_4"></td><td id="d2_9_5"></td><td id="d2_9_6"></td><td id="d2_9_7"></td><td id="d2_9_8"></td><td id="d2_9_9"></td><td id="d2_9_10"></td>
+						<td id="d2_9_11"></td><td id="d2_9_12"></td><td id="d2_9_13"></td><td id="d2_9_14"></td><td id="d2_9_15"></td><td id="d2_9_16"></td><td id="d2_9_17"></td><td id="d2_9_18"></td><td id="d2_9_19"></td><td id="d2_9_20"></td>
+						<td id="d2_9_21"></td><td id="d2_9_22"></td><td id="d2_9_23"></td><td id="d2_9_24"></td><td id="d2_9_25"></td><td id="d2_9_26"></td><td id="d2_9_27"></td><td id="d2_9_28"></td><td id="d2_9_29"></td><td id="d2_9_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">October</td>
+						<td id="d2_10_1"></td><td id="d2_10_2"></td><td id="d2_10_3"></td><td id="d2_10_4"></td><td id="d2_10_5"></td><td id="d2_10_6"></td><td id="d2_10_7"></td><td id="d2_10_8"></td><td id="d2_10_9"></td><td id="d2_10_10"></td>
+						<td id="d2_10_11"></td><td id="d2_10_12"></td><td id="d2_10_13"></td><td id="d2_10_14"></td><td id="d2_10_15"></td><td id="d2_10_16"></td><td id="d2_10_17"></td><td id="d2_10_18"></td><td id="d2_10_19"></td><td id="d2_10_20"></td>
+						<td id="d2_10_21"></td><td id="d2_10_22"></td><td id="d2_10_23"></td><td id="d2_10_24"></td><td id="d2_10_25"></td><td id="d2_10_26"></td><td id="d2_10_27"></td><td id="d2_10_28"></td><td id="d2_10_29"></td><td id="d2_10_30"></td><td id="d2_10_31"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">November</td>
+						<td id="d2_11_1"></td><td id="d2_11_2"></td><td id="d2_11_3"></td><td id="d2_11_4"></td><td id="d2_11_5"></td><td id="d2_11_6"></td><td id="d2_11_7"></td><td id="d2_11_8"></td><td id="d2_11_9"></td><td id="d2_11_10"></td>
+						<td id="d2_11_11"></td><td id="d2_11_12"></td><td id="d2_11_13"></td><td id="d2_11_14"></td><td id="d2_11_15"></td><td id="d2_11_16"></td><td id="d2_11_17"></td><td id="d2_11_18"></td><td id="d2_11_19"></td><td id="d2_11_20"></td>
+						<td id="d2_11_21"></td><td id="d2_11_22"></td><td id="d2_11_23"></td><td id="d2_11_24"></td><td id="d2_11_25"></td><td id="d2_11_26"></td><td id="d2_11_27"></td><td id="d2_11_28"></td><td id="d2_11_29"></td><td id="d2_11_30"></td><td class="wcal_blank"></td>
+					</tr>
+					<tr>
+						<td class="wcal_month">December</td>
+						<td id="d2_12_1"></td><td id="d2_12_2"></td><td id="d2_12_3"></td><td id="d2_12_4"></td><td id="d2_12_5"></td><td id="d2_12_6"></td><td id="d2_12_7"></td><td id="d2_12_8"></td><td id="d2_12_9"></td><td id="d2_12_10"></td>
+						<td id="d2_12_11"></td><td id="d2_12_12"></td><td id="d2_12_13"></td><td id="d2_12_14"></td><td id="d2_12_15"></td><td id="d2_12_16"></td><td id="d2_12_17"></td><td id="d2_12_18"></td><td id="d2_12_19"></td><td id="d2_12_20"></td>
+						<td id="d2_12_21"></td><td id="d2_12_22"></td><td id="d2_12_23"></td><td id="d2_12_24"></td><td id="d2_12_25"></td><td id="d2_12_26"></td><td id="d2_12_27"></td><td id="d2_12_28"></td><td id="d2_12_29"></td><td id="d2_12_30"></td><td id="d2_12_31"></td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr class="wcal_daysBar">
+						<td colspan="2"></td>
+						<td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
+						<td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+						<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+
+		<div id="wcal_schedContainer">
+			<table id="wcal_sched" class="wcal_tables">
+				<tr>
+					<td rowspan="2">
+						<div class="wcal_xo wcal_o">
+							<div><img alt="" src="" /></div>
+							<div><span>Assigned<br />Holidays</span></div>
+						</div>
+					</td>
+					<td>
+						<div class="wcal_xo wcal_o">
+							<div><img alt="" src="" /></div>
+							<div><span id="wcal_yrLabela1"></span></div>
+						</div>
+					</td>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="wcal_xo wcal_o">
+							<div><img alt="" src="" /></div>
+							<div><span id="wcal_yrLabela2"></span></div>
+						</div>
+					</td>
+					<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+				</tr>
+			</table>
+		</div>
+
+		<table id="wcal_holidays" class="wcal_tables">
+			<thead>
+				<tr>
+					<th colspan="5" class="wcal_title">Utah's State-Recognized Holidays</th>
+				</tr>
+				<tr>
+					<th colspan="2" id="wcal_yrLabels1"></th>
+					<th> </th>
+					<th colspan="2" id="wcal_yrLabels2"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Inserted by javascript -->
+			</tbody>
+		</table>
+	</div>
+
+	<div id="wcal_footer">
+		<p>
+			For issues concerning this calendar, contact 
+			<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">Brent Starks</a> at 
+			<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">grumpily@gmail.com</a>.
+		</p>
+	</div>
+
+</div>
+<!-- END: WEB CALENDAR -->
+	
+
+</body>
+
+</html>

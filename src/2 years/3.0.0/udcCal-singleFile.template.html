@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="Brent Starks, bstarks(AT)utah.gov" />
+		<meta name="author" content="Brent Starks, grumpily(AT)gmail.com" />
+
+		<title>CUCF X/O Squad Work Calendar (2 Yr.)</title>
+
+		<style></style>
+	</head>
+
+
+	<body>
+
+
+		<div id="wcal_calendar">
+
+			<div id="wcal_toolbar" class="wcal_header">
+
+				<nav id="wcal_nav_wrap">
+					<ul>
+						<li><button onclick="id0.wcal.tb.print()" class="wcal_btns wcal_btnImgPrint" title="Click here to print the calendar without the artifacts created by using other buttons (best in Chrome).">Print</button></li>
+						<li class="wcal_nav_separator">|</li>
+						<li><input id="wcal_input" type="text" onchange="id0.wcal.tb.gotoCal(this.value)" onclick="this.select()" title="Enter the desired year then click the button on the right to pull up that year's calendar." /><button onclick="id0.wcal.tb.gotoCal(document.getElementById('wcal_input').value)" class="wcal_btns wcal_btnImgGoToYr" title="Enter the desired year on the right then click this button to pull up that year's calendar.">Go To Year</button></li>
+						<li><button onclick="id0.wcal.tb.previous()" class="wcal_btns wcal_btnImgPrevious" title="Go to previous year's calendars stepping two years at a time.">Previous</button></li>
+						<li><button onclick="id0.wcal.tb.now()" class="wcal_btns wcal_btnImgCurrent" title="Get the current year's calendar.">Current</button></li>
+						<li><button onclick="id0.wcal.tb.next()" class="wcal_btns wcal_btnImgNext" title="Go to future year's calendars stepping two years at a time.">Next</button></li>
+						<li class="wcal_nav_separator">|</li>
+						<li><button id="wcal_dd" class="wcal_btns wcal_btnImgShow wcal_dropdown">View <span id="wcal_dropdown_arrow"></span></button>
+							<ul>
+								<li><input type="checkbox" id="wcal_view1" name="wcal_view" class="wcal_view" value="wcal_table">	<label for="wcal_view1">Calendars</label></li>
+								<li><input type="checkbox" id="wcal_view2" name="wcal_view" class="wcal_view" value="wcal_holidays"><label for="wcal_view2">Holiday Lists</label></li>
+								<li><input type="checkbox" id="wcal_view3" name="wcal_view" class="wcal_view" value="wcal_sched">	<label for="wcal_view3">Assigned Holidays</label></li>
+							</ul></li>
+						<li class="wcal_nav_separator">|</li>
+						<li><button class="wcal_btns wcal_btnImgHelp" onclick="id0.wcal.tb.help('2yrCal')">Help</button></li>
+					</ul>
+				</nav>
+
+				<div id="wcal_helpBox" class="wcal_hide">
+					<p><strong>Print</strong> - Click to open the print dialogue.</p>
+					<p><strong>Go To Year</strong> - Enter the desired year in the text box in front of the <strong>Go To Year</strong> button and then click on the <strong>Go To Year</strong> button to start the calendar on the desired year.</p>
+					<p><strong>Previous</strong> - Click to start the calendar two years before the year currently shown on the calendar. Each click steps two more years into the past.</p>
+					<p><strong>Current</strong> - Click to restore the displayed caledar to the current year.</p>
+					<p><strong>Next</strong> - Click to start the calendar two years farther into the future than the year currently shown on the calendar. Each click steps two more years into the future.</p>
+					<p><strong>View</strong> - Click to select which items to display with the calendar.</p>
+					<p><strong>Help</strong> - Click to see or hide this help dialogue.</p>
+					<hr />
+					<p>This calendar was created by <a href="mailto:grumpily@gmail.com?subject=Work Calendar">Brent Starks</a> at <a href="mailto:grumpily@gmail.com?subject=Work Calendar">grumpily@gmail.com</a>. This is the person to contact regarding any issues or feature requests with this calendar. Please include the name and email address of the maintainer of the web page containing this calendar.</p>
+					<p>Web page maintainers may find other more compatible versions of the calendar (and other resources) at <a href="http://id0.org/cucf/">http://id0.org/cucf/</a>.</p>
+				</div>
+
+			</div>
+			
+			
+
+
+			<div id="wcal_printArea">
+				<div id="wcal_container">
+					<table id="wcal_table" class="wcal_tables">
+						<thead>
+							<tr>
+								<td colspan="33" class="wcal_legendCell">
+									<h1 id="wcal_title"></h1>
+
+									<span class="wcal_headLeft">X-Squad Works</span>
+									<span class="wcal_headCenter">Paydays</span>
+									<span class="wcal_headRight">O-Squad Works</span>
+									<br />
+
+									<div class="wcal_headLeft">
+										<div class="wcal_xo wcal_x">
+											<div><img id="oImg" alt="" class="wcal_img_x" src="" /></div>
+										</div>
+									</div>
+									<div class="wcal_headCenter">
+										<div class="wcal_xo wcal_o">
+											<div><img alt="" class="wcal_img_o" src="" /></div>
+											<div>F$</div>
+										</div>
+										&nbsp;or&nbsp;
+										<div class="wcal_xo wcal_x">
+											<div><img alt="" class="wcal_img_x" src="" /></div>
+											<div>F$</div>
+										</div>
+									</div>
+									<div class="wcal_headRight">
+										<div class="wcal_xo wcal_o">
+											<div><img alt="" class="wcal_img_o" src="" /></div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</thead>
+						<tbody id="wcal_body">
+							
+							<!-- Inserted by javascript -->
+
+						</tbody>
+					</table>
+				</div>
+
+				<div id="wcal_schedContainer">
+					<table id="wcal_sched" class="wcal_tables">
+						<tr>
+							<td rowspan="2">
+								<div class="wcal_xo wcal_o">
+									<div><img alt="" class="wcal_img_o" src="" /></div>
+									<div><span>Assigned<br />Holidays</span></div>
+								</div>
+							</td>
+							<td>
+								<div class="wcal_xo wcal_o">
+									<div><img alt="" class="wcal_img_o" src="" /></div>
+									<div><span id="wcal_yrLabela1"></span></div>
+								</div>
+							</td>
+							<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+						</tr>
+						<tr>
+							<td>
+								<div class="wcal_xo wcal_o">
+									<div><img alt="" class="wcal_img_o" src="" /></div>
+									<div><span id="wcal_yrLabela2"></span></div>
+								</div>
+							</td>
+							<td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+						</tr>
+					</table>
+				</div>
+
+				<table id="wcal_holidays" class="wcal_tables">
+					<thead>
+						<tr>
+							<th colspan="5" class="wcal_title">Utah's State-Recognized Holidays</th>
+						</tr>
+						<tr>
+							<th colspan="2" id="wcal_yrLabels1"></th>
+							<th> </th>
+							<th colspan="2" id="wcal_yrLabels2"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<!-- Inserted by javascript -->
+					</tbody>
+				</table>
+			</div>
+
+			<div id="wcal_footer">
+				<p>
+					For issues concerning this calendar, contact 
+					<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">Brent Starks</a> at 
+					<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">grumpily@gmail.com</a>.
+				</p>
+			</div>
+
+		</div>
+
+
+	
+		<script></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="Brent Starks, bstarks(AT)utah.gov" />
+		<meta name="author" content="Brent Starks, grumpily(AT)gmail.com" />
+
+		<title>CUCF X/O Squad Work Calendar (2 Yr.)</title>
+
+		<link rel="stylesheet" type="text/css" href="./lib/spectrum/spectrum.css">
+		<script type="text/javascript" src="./lib/spectrum/docs/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="./lib/spectrum/spectrum.js"></script>
+		<link id="wcal_pocketStylesheet" rel="stylesheet" href="udcCalPocket.css" title="wcal_pocketStylesheet" />
+	</head>
+
+
+	<body>
+		
+		<div id="wcal_calendar">
+		</div>
+
+
+		<script id="wcal_calendar_tmpl" type="text/template">
+			<div id="wcal_toolbar" class="wcal_header">
+
+				<nav id="wcal_nav_wrap">
+					<ul>
+						<li><button onclick="id0.wcal.tb.print()" class="wcal_btns wcal_btnImgPrint" title="Click here to print the calendar without the artifacts created by using other buttons (best in Chrome).">Print</button></li>
+						<li class="wcal_nav_separator">|</li>
+						<li><input id="wcal_input" type="text" value="${yr}" onchange="id0.wcal.tb.gotoCal(this.value)" onclick="this.select()" title="Enter the desired year then click the button on the right to pull up that year's calendar." /><button onclick="id0.wcal.tb.gotoCal(document.getElementById('wcal_input').value)" class="wcal_btns wcal_btnImgGoToYr" title="Enter the desired year on the right then click this button to pull up that year's calendar.">Go To Year</button></li>
+						<li><button onclick="id0.wcal.tb.previous()" class="wcal_btns wcal_btnImgPrevious" title="Go to previous year's calendars stepping two years at a time.">Previous</button></li>
+						<li><button onclick="id0.wcal.tb.now()" class="wcal_btns wcal_btnImgCurrent" title="Get the current year's calendar.">Current</button></li>
+						<li><button onclick="id0.wcal.tb.next()" class="wcal_btns wcal_btnImgNext" title="Go to future year's calendars stepping two years at a time.">Next</button></li>
+						<li class="wcal_nav_separator">|</li>
+						<li><button onclick="id0.wcal.tb.options()" class="wcal_btns wcal_btnImgShow">Options</button></li>
+						<li class="wcal_nav_separator">|</li>
+						<li><button onclick="id0.wcal.tb.help('pocketCal')" class="wcal_btns wcal_btnImgHelp">Help</button></li>
+					</ul>
+				</nav>
+
+
+
+				<div id="wcal_helpBox" class="wcal_hide wcal_infoBox">
+					<p><strong>Print</strong> - Click to open the print dialogue.</p>
+					<p><strong>Go To Year</strong> - Enter the desired year in the text box in front of the <strong>Go To Year</strong> button and then click on the <strong>Go To Year</strong> button to start the calendar on the desired year.</p>
+					<p><strong>Previous</strong> - Click to start the calendar two years before the year currently shown on the calendar. Each click steps two more years into the past.</p>
+					<p><strong>Current</strong> - Click to restore the displayed caledar to the current year.</p>
+					<p><strong>Next</strong> - Click to start the calendar two years farther into the future than the year currently shown on the calendar. Each click steps two more years into the future.</p>
+					<p><strong>Options</strong> - Click to set how dates are displayed and to set color options.</p>
+					<p><strong>Help</strong> - Click to see or hide this help dialogue.</p>
+					<hr />
+					<p>This calendar was created by <a href="mailto:grumpily@gmail.com?subject=Work Calendar">Brent Starks</a> at <a href="mailto:grumpily@gmail.com?subject=Work Calendar">grumpily@gmail.com</a>. This is the person to contact regarding any issues or feature requests with this calendar. Please include the name and email address of the maintainer of the web page containing this calendar.</p>
+					<p>Web page maintainers may find other more compatible versions of the calendar (and other resources) at <a href="http://id0.org/cucf/">http://id0.org/cucf/</a>.</p>
+				</div>
+
+				<div id="wcal_optionsBox" class="wcal_optionsBox wcal_hide">
+					<div class="wcal_optionsDisplayArea">
+						<p>
+							<ul class="wcal_optionsList">
+								<li>X Days
+									<ul>
+										<li id="wcal_optXDaysBgColor" class="wcal_optSelectableLi wcal_x" onclick="id0.wcal.tb.getNewColor(this)">
+											Change Background Color
+										</li>
+										<li id="wcal_optXDaysFgColor" class="wcal_optSelectableLi wcal_x" onclick="id0.wcal.tb.getNewColor(this)">
+											Change Text Color
+										</li>
+									</ul>
+								</li>
+								<li>O Days
+									<ul>
+										<li id="wcal_optODaysBgColor" class="wcal_optSelectableLi wcal_o" onclick="id0.wcal.tb.getNewColor(this)">
+											Change Background Color
+										</li>
+										<li id="wcal_optODaysFgColor" class="wcal_optSelectableLi wcal_o" onclick="id0.wcal.tb.getNewColor(this)">
+											Change Text Color
+										</li>
+									</ul>
+								</li>
+								<!--<li>Month Partitions
+									<ul>
+										<li id="wcal_optMonthPartitionColor" class="wcal_optSelectableLi wcal_optLi" onclick="id0.wcal.tb.getNewColor(this)">
+											Change Line Color: <span class="wcal_colorSwatch wcal_topBorder"></span>
+										</li>
+										<li id="wcal_optMonthPartitionLineSize" class="wcal_optSelectableLi wcal_optLi">
+											Change Line Size:
+											<span id="wcal_optLineSizeTxt"></span> <input id="wcal_optLineSize" type="range" min="1" max="5" value="2" onchange="id0.wcal.tb.getLineSize(this);" />  <span class="wcal_colorSwatch"></span>
+										</li>
+									</ul>
+								</li>-->
+								<li>Headers
+									<ul>
+										<li id="wcal_optHeaderFgColor" class="wcal_optSelectableLi wcal_optHd wcal_optLi" onclick="id0.wcal.tb.getNewColor(this)">
+											Change Text Color
+										</li>
+										<li id="wcal_optHeaderShowBorders" class="wcal_optSelectableLi wcal_optLi" onclick="id0.wcal.tb.showBorder(this)">
+											<span>Show</span> Header Borders
+										</li>
+										<li id="wcal_optHeaderBorderColor" class="wcal_optSelectableLi wcal_optLi" onclick="id0.wcal.tb.getNewColor(this)">
+											Change Border Color: <span class="wcal_colorSwatch"></span>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</p>
+					</div>
+					<div class="wcal_optionsDisplayArea">
+						<input type="text" id="wcal_spectrum" />
+					</div>
+				</div>
+
+			</div>
+
+
+
+
+			<div id="wcal_printArea">
+			</div>
+
+
+
+			<div id="wcal_footer">
+				<p>
+					For issues concerning this calendar, contact 
+					<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">Brent Starks</a> at 
+					<a href="mailto:grumpily@gmail.com?subject=Work Calendar" class="contact">grumpily@gmail.com</a>.
+			</p>
+			</div>
+		</script>
+
+		<script id="wcal_printArea_tmpl" type="text/template">
+			<div class="wcal_cardSets">
+				<div id="wcal_cardSets_main" class="wcal_cardSetFB">
+					<div class="wcal_card wcal_front">
+						<table>
+							<thead>
+								<tr>
+									<td colspan="2" class="wcal_x"><div class="wcal_xo"><div><canvas class="wcal_bgColor_x" width="1" height="1"></canvas></div><div class="wcal_con_x">X</div></div></td>
+									<th colspan="4" class="wcal_hd">${yr}</th>
+									<td colspan="2" class="wcal_o"><div class="wcal_xo"><div><canvas class="wcal_bgColor_o" width="1" height="1"></canvas></div><div class="wcal_con_o">O</div></div></td>
+								</tr>
+								<tr>
+									<th class="wcal_hd"></th>
+									<th class="wcal_hd">Sun</th>
+									<th class="wcal_hd">Mon</th>
+									<th class="wcal_hd">Tue</th>
+									<th class="wcal_hd">Wed</th>
+									<th class="wcal_hd">Thu</th>
+									<th class="wcal_hd">Fri</th>
+									<th class="wcal_hd">Sat</th>
+								</tr>
+							</thead>
+							<tbody>
+${front}
+							</tbody>
+						</table>
+					</div>
+
+
+					<div class="wcal_card wcal_back">
+						<table>
+							<thead>
+								<tr>
+									<td colspan="2" class="wcal_x"><div class="wcal_xo"><div><canvas class="wcal_bgColor_x" width="1" height="1"></canvas></div><div class="wcal_con_x">X</div></div></td>
+									<th colspan="4" class="wcal_hd">${yr}</th>
+									<td colspan="2" class="wcal_o"><div class="wcal_xo"><div><canvas class="wcal_bgColor_o" width="1" height="1"></canvas></div><div class="wcal_con_o">O</div></div></td>
+								</tr>
+								<tr>
+									<th class="wcal_hd"></th>
+									<th class="wcal_hd">Sun</th>
+									<th class="wcal_hd">Mon</th>
+									<th class="wcal_hd">Tue</th>
+									<th class="wcal_hd">Wed</th>
+									<th class="wcal_hd">Thu</th>
+									<th class="wcal_hd">Fri</th>
+									<th class="wcal_hd">Sat</th>
+								</tr>
+							</thead>
+							<tbody>
+${back}
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="wcal_cardSets_0" class="wcal_cardSetFB">
+				</div>
+				<div id="wcal_cardSets_1" class="wcal_cardSetFB">
+				</div>
+				<div id="wcal_cardSets_2" class="wcal_cardSetFB">
+				</div>
+				<div id="wcal_cardSets_3" class="wcal_cardSetFB">
+				</div>
+				<div id="wcal_cardSets_4" class="wcal_cardSetFB">
+				</div>
+			</div>
+		</script>
+		
+		
+		<!--<textarea id="showHtml" style="width:100%;height:50em;border:1px solid black;margin-top:5em;"></textarea>  -->
+
+
+		<script src="udcCalPocket.js"></script>
+
+	</body>
+
+</html>
