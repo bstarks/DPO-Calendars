@@ -1,4 +1,4 @@
-    # DPO Calendars
+# DPO Calendars
 
 Calendars showing the 28 day X/O squad work schedual.
 
