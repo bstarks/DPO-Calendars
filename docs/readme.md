@@ -5,7 +5,7 @@ The list of available calendars:
 
 | |Two Year Calendars|
 |--|--|
-| ![2 yr Calendar](./2yr%20calendar.png) |  <a href="https://bstarks.github.io/DPO-Calendars/udcCal_singleFile.min.html" target="_blank">3.1.0</a>: This version shows two years of work schedules, (optionally) the scheduled-off holiday table, and (optionally) the table listing the holidays recognized by Utah law. |
+| <img href="./2yr%20calendar.png" height="20%" width="20%>![2 yr Calendar](./2yr%20calendar.png) |  <a href="https://bstarks.github.io/DPO-Calendars/udcCal_singleFile.min.html" target="_blank">3.1.0</a>: This version shows two years of work schedules, (optionally) the scheduled-off holiday table, and (optionally) the table listing the holidays recognized by Utah law. |
 
 <br>
 
