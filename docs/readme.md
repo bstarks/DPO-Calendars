@@ -1,13 +1,18 @@
-# DPO Calendars
-
 Calendars showing the 28 day X/O squad work schedule.
 
 
 The list of available calendars:
-* Two Year Calendars
-  * <a href="https://bstarks.github.io/DPO-Calendars/udcCal_singleFile.min.html" target="_blank">3.1.0</a>: This version shows two years of work schedules, (optionally) the scheduled-off holiday table, and (optionally) the table listing the holidays recognized by Utah law.
-* Pocket Calendars
-  * <a href="https://bstarks.github.io/DPO-Calendars/udcCalPocket_1File.html" target="_blank">1.0.0</a>: This version provides a rendering of a credit card sized annual calendar suitable for printing and laminating.
+
+| |Two Year Calendars|
+|--|--|
+| ![2 yr Calendar](https://bstarks.github.io/DPO-Calendars/docs/2yr%20calendar.png) |  <a href="https://bstarks.github.io/DPO-Calendars/udcCal_singleFile.min.html" target="_blank">3.1.0</a>: This version shows two years of work schedules, (optionally) the scheduled-off holiday table, and (optionally) the table listing the holidays recognized by Utah law. |
+
+<br>
+
+| |Pocket Calendars|
+|--|--|
+|![Pocket Calendar](https://bstarks.github.io/DPO-Calendars/docs/pocket%20calendar.png)| <a href="https://bstarks.github.io/DPO-Calendars/udcCalPocket_1File.html" target="_blank">1.0.0</a>: This version provides a rendering of a credit card sized annual calender suitable for printing and laminating. |
+
 
 ## Usage
 The calendars are written in standard JavaScript using no libraries or dependencies. They should function in any modern browser without issues. Select your desired method for using the calendars below. 
