@@ -5,13 +5,13 @@ The list of available calendars:
 
 | |Two Year Calendars|
 |--|--|
-| <img href="./2yr%20calendar.png" height="20%" width="20%>![2 yr Calendar](./2yr%20calendar.png) |  <a href="https://bstarks.github.io/DPO-Calendars/udcCal_singleFile.min.html" target="_blank">3.1.0</a>: This version shows two years of work schedules, (optionally) the scheduled-off holiday table, and (optionally) the table listing the holidays recognized by Utah law. |
+|<a href="https://bstarks.github.io/DPO-Calendars/udcCal_singleFile.min.html" target="_blank">![2 yr Calendar](./2yr%20calendar.png)</a> |  <a href="https://bstarks.github.io/DPO-Calendars/udcCal_singleFile.min.html" target="_blank">3.1.0</a>: This version shows two years of work schedules, (optionally) the scheduled-off holiday table, and (optionally) the table listing the holidays recognized by Utah law. |
 
 <br>
 
 | |Pocket Calendars|
 |--|--|
-|![Pocket Calendar](./pocket%20calendar.png)| <a href="https://bstarks.github.io/DPO-Calendars/udcCalPocket_1File.html" target="_blank">1.0.0</a>: This version provides a rendering of a credit card sized annual calender suitable for printing and laminating. |
+|<a href="https://bstarks.github.io/DPO-Calendars/udcCalPocket_1File.html" target="_blank">![Pocket Calendar](./pocket%20calendar.png)</a>| <a href="https://bstarks.github.io/DPO-Calendars/udcCalPocket_1File.html" target="_blank">1.0.0</a>: This version provides a rendering of a credit card sized annual calender suitable for printing and laminating. |
 
 
 ## Usage
@@ -27,7 +27,7 @@ The calendars are written in standard JavaScript using no libraries or dependenc
 
 ## Road Map
 
- - Re-factor code: The code was cobbled together quickly and sloppily some years ago. It needs to be updated to ES6/7 and constructed a bit more skillfully/efficiently.
+ - Re-factor code: The code was cobbled together quickly and sloppily in the late 1990s (as revealed by the assigned holidays table not used since the very early 2000s). It needs to be updated to ES6/7 and constructed a bit more skillfully/efficiently.
  - Make month view: A view for insertion into planners or for individual preference.
  - Fix options pane
  - Make web component version.
@@ -36,4 +36,4 @@ The calendars are written in standard JavaScript using no libraries or dependenc
 Current contributors:
  - Brent Starks
 
-If you would like to be a contributor, to eventually take over the project, to improve documentation, or to develop something new for the cause, contact Brent to discuss appropriate arrangements. Assistance is welcome.
+If you would like to be a contributor, to eventually take over the project, to improve documentation, or to develop something new for the cause, contact Brent Starks at CUCF to discuss appropriate arrangements. Assistance is welcome.
