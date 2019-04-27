@@ -26,6 +26,7 @@ The calendars are written in standard JavaScript using no libraries or dependenc
  - Re-factor code: The code was cobbled together quickly and sloppily in 1998 (as revealed by the assigned holidays table not used since the very early 2000s). It needs to be updated to ES6/7 and constructed a bit more skillfully/efficiently.
  - Make month view: A view for insertion into planners or for individual preference.
  - Fix options pane
+ - Make a mobile app version.
  - Make web component version.
 
 ## Contributors
