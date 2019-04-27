@@ -1,4 +1,4 @@
-Calendars showing the 28 day X/O squad work schedule.
+## Calendars showing the 28 day X/O squad work schedule.
 
 
 The list of available calendars:
@@ -17,17 +17,13 @@ The list of available calendars:
 ## Usage
 The calendars are written in standard JavaScript using no libraries or dependencies. They should function in any modern browser without issues. Select your desired method for using the calendars below. 
 
- - **Direct Use**: Clicking on the above versions will open the calendar in its own window. Opening the calendars from this page will ensure
-   you are always accessing the most current debugged version.   
- - **Linking**: Right-click on the above desired version and select "Copy link address" then paste where desired. Or may be able to drag
-   the link to your bookmarks/document.
- - **Download**: Click one of the download buttons above. Or right-click on the link for the desired version and select "Save link as..." For
-   both of these options, follow your system's process for selecting the
-   desired save location and then saving a file to your system.
+ - **Direct Use**: Clicking on the above versions will open the calendar in its own window. Opening the calendars from this page will ensure you are always accessing the most current debugged version.   
+ - **Linking**: Right-click on the above desired version and select "Copy link address" then paste where desired. Or you may be able to drag the link to your bookmarks/document.
+ - **Download**: Click one of the download buttons above. Or right-click on the link for the desired version and select "Save link as..." For both of these options, follow your system's process for selecting the desired save location and then saving a file to your system.
 
 ## Road Map
 
- - Re-factor code: The code was cobbled together quickly and sloppily in the late 1990s (as revealed by the assigned holidays table not used since the very early 2000s). It needs to be updated to ES6/7 and constructed a bit more skillfully/efficiently.
+ - Re-factor code: The code was cobbled together quickly and sloppily in 1998 (as revealed by the assigned holidays table not used since the very early 2000s). It needs to be updated to ES6/7 and constructed a bit more skillfully/efficiently.
  - Make month view: A view for insertion into planners or for individual preference.
  - Fix options pane
  - Make web component version.
